@@ -45,6 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/userpages/bookinggroup/BookingDoneDetailPage" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -76,7 +77,7 @@
       <workItem from="1600688896259" duration="794000" />
       <workItem from="1600689853300" duration="255000" />
       <workItem from="1600692942846" duration="38000" />
-      <workItem from="1600692991733" duration="347000" />
+      <workItem from="1600692991733" duration="3538000" />
     </task>
     <servers />
   </component>
