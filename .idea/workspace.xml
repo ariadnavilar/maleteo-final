@@ -21,6 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5ee1ced7-ed61-4e98-beb9-7125f4cbc3b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMANDOS VARIOS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/COMANDOS VARIOS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,25 +50,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/userpages/bookinggroup/BookingDoneDetailPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\PreBookingDetailPage\components\BookingDetail" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\PreBookingDetailPage" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingDoneDetailPage" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\AvailableGuardianListPage\components\Location" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingDoneDetailPage" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingCompletedPage" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\AvailableGuardianListPage\components\GuardianList" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\guardianpages\PlaceDescriptionPage" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\guardianpages\EditGuardianProfilePage" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\PreBookingDetailPage\components\BookingDetail" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\PreBookingDetailPage" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingDoneDetailPage" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\AvailableGuardianListPage\components\Location" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\guardianpages\RequestsListPage" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -77,7 +83,10 @@
       <workItem from="1600688896259" duration="794000" />
       <workItem from="1600689853300" duration="255000" />
       <workItem from="1600692942846" duration="38000" />
-      <workItem from="1600692991733" duration="3538000" />
+      <workItem from="1600692991733" duration="6294000" />
+      <workItem from="1600771974194" duration="1710000" />
+      <workItem from="1600778403669" duration="668000" />
+      <workItem from="1600788187260" duration="679000" />
     </task>
     <servers />
   </component>
@@ -97,14 +106,16 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600689087311">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2438" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600705320145">
+      <screen x="1920" y="0" width="1360" height="728" />
     </state>
     <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600689087311" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600689543915">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2438" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600705320145" />
+    <state x="2444" y="193" key="FileChooserDialogImpl" timestamp="1600779071277">
+      <screen x="1920" y="0" width="1360" height="728" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600689543915" />
+    <state x="2444" y="193" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600779071277" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600674668263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -4,6 +4,9 @@
 npm i --save bootstrap
 npm i --save node-sass
 npm i react-router-dom --save
+npm i nodemon --save
+npm i express --save
+npm i mongoose --save
 
 3. git branch NOMBRE_RAMA           // para crearla
 4. git checkout NOMBRE_RAMA         // para cambiar a la rama que se ha creado
