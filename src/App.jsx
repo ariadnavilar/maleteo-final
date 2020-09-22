@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {UsersNavBar} from "./pages/userpages/shared/UsersNavBar/UsersNavBar";
+
 
 function App() {
   return (
@@ -19,6 +21,15 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <footer>
+        <div>
+          <UsersNavBar UsersNavBar={UsersNavBar}/>
+        </div>
+      </footer>
+
+
+
     </div>
   );
 }
