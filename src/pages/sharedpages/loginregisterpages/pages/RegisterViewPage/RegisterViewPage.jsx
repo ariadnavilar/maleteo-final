@@ -11,8 +11,7 @@ export default function RegisterViewPage(){
 
         const onSubmit = formData => {
         API.post('users/register', formData).then(res => {
-            localStorage.setItem("token", res.data.token);
-            localStorage.setItem("user", JSON.stringify(res.data.user))
+            console.log('Usuario registrado');
         })
     }
 

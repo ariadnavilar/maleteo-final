@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee1ced7-ed61-4e98-beb9-7125f4cbc3b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="5ee1ced7-ed61-4e98-beb9-7125f4cbc3b5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
