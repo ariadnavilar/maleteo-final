@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { API } from "../../../../../shared/services/api";
+import LoginRegisterNavBar from "../../shared/components/LoginRegisterNavBar/LoginRegisterNavBar";
 
 export default function LoginViewPage(){
 
@@ -17,7 +18,14 @@ export default function LoginViewPage(){
     return(
 
         <div>
-
+            <button className="containerarrow">
+                <i className="pi pi-chevron-left gobackbtn" ></i>
+            </button>
+            <LoginRegisterNavBar/>
+            <h2>Inicia sesión ahora</h2>
+            <button type="button" className="fbbtn">Facebook</button>
+            <button type="button" className="googlebtn">Google</button>
+            <p className="text">o utiliza tu correo electrónico</p>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <label htmlFor="email">Dirección de correo electrónico</label>
@@ -28,8 +36,9 @@ export default function LoginViewPage(){
                 <input type="password" name="password" ref={register ({required:true , minLength:8})}/>
                 {errors.password && <span> Contraseña incorrecta</span>}
 
-                <input type="submit" value="Iniciar sesión"/>
-
+                <div className="centered">
+                    <input className="orangebtn" type="submit" value="Iniciar sesión"/>
+                </div>
             </form>
         </div>
     );

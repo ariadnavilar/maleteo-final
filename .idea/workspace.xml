@@ -20,21 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ee1ced7-ed61-4e98-beb9-7125f4cbc3b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/loginregisterstyles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/HomePage/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/HomePage/HomePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/components/Buttons/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/Buttons/buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

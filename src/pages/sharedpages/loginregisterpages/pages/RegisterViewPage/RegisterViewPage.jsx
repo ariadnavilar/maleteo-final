@@ -2,23 +2,18 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "../loginregisterstyles.scss";
 import "../../../../../shared/components/Buttons/buttons.scss";
-import axios from "axios";
+import { API } from "../../../../../shared/services/api";
 import LoginRegisterNavBar from "../../shared/components/LoginRegisterNavBar/LoginRegisterNavBar";
 
 export default function RegisterViewPage(){
 
-    const { register, handleSubmit, reset, errors } = useForm();
-
-    const onSubmit = data => {console.log(data);reset()};
-
-/*            <-----ESTO CUANDO TENGAMOS EL BACK, el endpoint tiene que ser igual a 'register'----->
+    const { register, handleSubmit, errors } = useForm();
 
         const onSubmit = formData => {
-        axios.post(process.env.REACT_APP_BACK_URL + 'register', formData).then(res => {
+        API.post('users/register', formData).then(res => {
             console.log('Usuario registrado');
         })
     }
-    */
 
     return(
 
