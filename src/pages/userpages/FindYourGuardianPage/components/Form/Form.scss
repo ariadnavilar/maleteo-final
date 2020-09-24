@@ -1,0 +1,59 @@
+.inputsearch {
+  background-color: transparent;
+  padding-left: 40px;
+  box-shadow: 0px 0px 3px 3px #E7E7E7;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Noto Sans", sans-serif;
+  position: relative;
+}
+
+.datesearch {
+  background-color: transparent;
+  padding-left: 40px;
+  box-shadow: 0px 0px 3px 3px #E7E7E7;
+  width: 45%;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Noto Sans", sans-serif;
+  position: relative;
+  display: inline-flex;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.formicons {
+  position: absolute;
+  transform: translate(12.5px, 20px);
+  color: orange;
+  font-weight: bold;
+}
+
+.luggageicon {
+  position: absolute;
+  transform: translate(12.5px, 73px);
+  color: orange;
+  font-weight: bold;
+}
+
+.centered {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.centered2 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: dimgrey;
+}
