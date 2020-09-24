@@ -4,14 +4,6 @@ import "./News.scss";
 
 export default function News() {
 
-    const [trips, setTrips] = useState([])
-
-    useEffect(() => {
-        axios.get('').then(res => {
-            setTrips(res.data)
-        })
-    })
-
     return (
         <div>
             <h2 className="titlesection">Novedades</h2>
