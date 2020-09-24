@@ -3,13 +3,14 @@ import "./UsersNavBar.scss";
 
 export function UsersNavBar() {
     return (
+        <div className="UsersNavBar">
+            <i className="pi pi-home" style={{'fontSize': '2.7em'}}></i>
+            <i className="pi pi-search" style={{'fontSize': '2.7em'}}></i>
+            <i className="pi pi-comments" style={{'fontSize': '2.7em'}}></i>
+            <i className="pi pi-user" style={{'fontSize': '2.7em'}}></i>
+        </div>
 
-        <footer className="UsersNavBar">
-            <img src="./inicio@2x.png" alt="icono"/>
-            <img src="./buscar@2x.png" alt="icono"/>
-            <img src="./mensaje@2x.png" alt="icono"/>
-            <img src="./usuario@2x.png" alt="icono"/>
-        </footer>
+
 
     );
 }
