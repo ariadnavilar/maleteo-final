@@ -24,22 +24,18 @@ export default function Form() {
                 <div className="centered">
                     <span className="pi pi-search formicons"></span>
                     <input className="inputsearch" type="text" name="location" placeholder="¿Dónde te encuentras? Madrid, Barcelona..." ref={register ({required:true})}/>
-                    {errors.location && <span>Introduce una localización válida</span>}
                 </div>
                 <div className="row centered">
-                    <input className="datesearch" type="date" name="deposit" placeholder="Depósito" ref={register ({required:true})}/>
-                    {errors.deposit && <span>Introduce una fecha de depósito</span>}
-
-                    <input className="datesearch" type="date" name="withdrawal" placeholder="Retirada" ref={register ({required:true})}/>
-                    {errors.withdrawal && <span>Introduce una fecha de retirada</span>}
+                    <input className="datesearch calendar" type="date" name="deposit" placeholder="Depósito" ref={register ({required:true})}/>
+                    <input className="datesearch calendar" type="date" name="withdrawal" placeholder="Retirada" ref={register ({required:true})}/>
                 </div>
-                <div className="centered2">
+                <div className="row centered">
                     <span className="pi pi-briefcase luggageicon"></span>
-                    <input className="datesearch col"  type="number" name="luggage" placeholder="Nº de piezas" ref={register ({required:true})}/>
-                    {errors.luggage && <span>Introduce el número de maletas</span>}
+                    <input className="datesearch"  type="number" name="luggage" placeholder="Nº de piezas" ref={register ({required:true})}/>
 
                     <input className="orangebtn sm" type="submit" value="Buscar"/>
                 </div>
+                {errors.location && errors.withdrawal && errors.deposit && errors.luggage && <span className="warning">Introduce todos los campos necesarios</span>}
             </form>
         </div>
     )
