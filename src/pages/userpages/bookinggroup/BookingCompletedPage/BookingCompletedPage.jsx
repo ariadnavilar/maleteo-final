@@ -1,20 +1,22 @@
 import React from "react";
 import "./BookingCompletedPage.scss"
 
-export default function CompleteBooking() {
+
+export default function BookingCompletedPage() {
 
     return (
+
         <div className="logoDiv">
             <div className="firstline">
                 <div className="parrafo1">
                     <h2>Reserva Completada</h2>
                 </div>
-                <div>
+                <div className="icone">
                     <span className ="pi pi-times"></span>
                 </div>
             </div>
             <div className="logofenix">
-                <img className="fenix" src={require('../assets/fenix@2x.png')} />
+                <img src={require("./assets/img/fenix.png")}/>
             </div>
             <div className="parrafo2">
                 <h3>BE FREE!</h3>
