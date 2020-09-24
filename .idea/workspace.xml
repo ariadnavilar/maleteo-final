@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee1ced7-ed61-4e98-beb9-7125f4cbc3b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/loginregisterstyles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/loginregisterstyles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/FindYourGuardianPage/components/Experiences/Experiences.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/FindYourGuardianPage/components/Experiences/Experiences.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/FindYourGuardianPage/components/News/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/FindYourGuardianPage/components/News/News.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/components/Buttons/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/Buttons/buttons.scss" afterDir="false" />
-    </list>
+    <list default="true" id="5ee1ced7-ed61-4e98-beb9-7125f4cbc3b5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +80,7 @@
       <workItem from="1600771974194" duration="1710000" />
       <workItem from="1600778403669" duration="668000" />
       <workItem from="1600788187260" duration="24192000" />
+      <workItem from="1600933122819" duration="300000" />
     </task>
     <servers />
   </component>
