@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export default function SelectedGuardianPage() {
     return (
-
         <div>
-            <h4>Hello</h4>
+            <h1>SELECTED GUARDIAN</h1>
         </div>
-
-    );
+    )
 }
-
