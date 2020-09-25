@@ -1,11 +1,10 @@
-.UsersNavBar {
-  display: flex;
-  position:fixed;
-  bottom:5px;
-  width:84%;
+.navbar {
+  position:inherit;
+  bottom:0;
+  width:100%;
+  height: auto;
   justify-content: space-between;
-  height: 31px;
-  width: auto;
   background: #ffffff;
-  margin-top: 12px;
+  padding-top: 5%;
+  color: black;
 }
