@@ -32,8 +32,6 @@ export default function Form() {
         history.push("/guardiansearch/");
         
     }
-
-
     return (
         <div>
 
