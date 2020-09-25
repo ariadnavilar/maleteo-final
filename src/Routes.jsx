@@ -13,7 +13,7 @@ function Routes() {
                 <Route path='/register'><RegisterViewPage/></Route>
                 <Route path='/login'><LoginViewPage/></Route>
                 <Route path='/completedbooking'><BookingCompletedPage/></Route>
-                <Route path='/'><HomePage/></Route>
+                <Route path='/home'><HomePage/></Route>
             </Switch>
         </Router>
     );
