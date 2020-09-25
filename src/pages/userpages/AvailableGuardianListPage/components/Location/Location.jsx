@@ -25,7 +25,6 @@ export default function Location() {
     return (
         <div>
             <div className="map" id="map">
-
             </div>
         </div>
     )

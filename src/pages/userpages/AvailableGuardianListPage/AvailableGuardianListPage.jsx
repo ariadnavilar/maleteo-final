@@ -3,6 +3,7 @@ import Location from "./components/Location/Location";
 import { API} from "../../../shared/services/api";
 import { Carousel } from "primereact/carousel";
 import { Link} from "react-router-dom";
+import "./AvailableGuardianListPage.scss";
 
 export default function AvailableGuardianListPage() {
 
@@ -16,10 +17,15 @@ export default function AvailableGuardianListPage() {
     const itemTemplate = (guardian) =>{
         return  (
                 <div>
-                <Link to={"/selectedguardian" + guardian._id}>
-                    <img src={guardian.personalImage}/>
-                    <span>{guardian._id}</span>
-                </Link>
+                    <Link to={"/selectedguardian" + guardian._id}>
+                        <div className="p-carousel-content">
+                            <div className="row">
+                                <img className="homeimg col-6" src={guardian.images[0]}/>
+                                <p className="textinfo">{guardian.name} {guardian.surname}</p>
+                                <img className="personalimg" src={guardian.personalImage}/>
+                            </div>
+                        </div>
+                    </Link>
                 </div>
         )
     }

@@ -23,17 +23,6 @@ export default function Form() {
             history.push("/guardiansearch")
     }
 
-    function fillInAddress() {
-        const place = autocomplete.getPlace();
-    };
-
-    const autocomplete = new google.maps.places.Autocomplete(
-        document.getElementById("location"),{ types: ["geocode"] });// Avoid paying for data that you don't need by restricting the set of// place fields that are returned to just the address components.
-    autocomplete.setFields(["address_component"]);// When the user selects an address from the drop-down, populate the// address fields in the form.
-    autocomplete.addListener("place_changed", fillInAddress);
-
-     // Get the place details from the autocomplete object.const place = autocomplete.getPlace();for (const component in componentForm) {
-
     return (
         <div>
 
