@@ -26,7 +26,7 @@ export default function AvailableGuardianListPage() {
 
     return (
                     <div>
-                        <Location/>
+                        <Location guardians={guardians}/>
                         <Carousel value={guardians} itemTemplate={itemTemplate}></Carousel>
                     </div>
     )
