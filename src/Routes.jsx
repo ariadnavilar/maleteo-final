@@ -8,16 +8,15 @@ import FindYourGuardianPage from "./pages/userpages/FindYourGuardianPage/FindYou
 import BookingCompletedPage from "./pages/userpages/bookinggroup/BookingCompletedPage/BookingCompletedPage";
 import AvailableGuardianListPage from "./pages/userpages/AvailableGuardianListPage/AvailableGuardianListPage";
 
-
 function Routes() {
     return (
         <Router>
             <Switch>
-                <Route path='/selectedguardian/:id'><SelectedGuardianPage/></Route>
                 <Route path='/register'><RegisterViewPage/></Route>
                 <Route path='/login'><LoginViewPage/></Route>
                 <Route path='/findguardian'><FindYourGuardianPage/></Route>
                 <Route path='/guardiansearch'><AvailableGuardianListPage/></Route>
+                <Route path='/selectedguardian'><SelectedGuardianPage/></Route>
                 <Route path='/completedbooking'><BookingCompletedPage/></Route>
                 <Route path='/home'><HomePage/></Route>
             </Switch>
