@@ -16,7 +16,7 @@ export default function AvailableGuardianListPage() {
     const itemTemplate = (guardian) =>{
         return  (
                 <div>
-                <Link to={"/selectedguardian" + guardian._id}>
+                <Link to={"/selectedguardian/" + guardian._id}>
                     <img src={guardian.personalImage}/>
                     <span>{guardian._id}</span>
                 </Link>

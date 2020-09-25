@@ -43,7 +43,7 @@ export default function Form() {
                     <input className="controls" type="text" name="location" id="location"
                            placeholder="¿Dónde te encuentras? Madrid, Barcelona..." ref={register({required: true})}/>
                 </div>
-                {/* <div className="row centered">
+                <div className="row centered">
                     <input className="datesearch calendar" type="date" name="deposit" placeholder="Depósito"
                            ref={register({required: true})}/>
                     <input className="datesearch calendar" type="date" name="withdrawal" placeholder="Retirada"
@@ -55,7 +55,7 @@ export default function Form() {
                            ref={register({required: true})}/>
 
 
-                </div> */}
+                </div>
                     <input className="orangebtn sm" type="submit" value="Buscar"/>
                 {errors.location && errors.withdrawal && errors.deposit && errors.luggage &&
                 <span className="warning">Introduce todos los campos necesarios</span>}
