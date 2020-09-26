@@ -12,7 +12,6 @@ export default function LoginViewPage(){
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("user", JSON.stringify(res.data.name))
         })
-
     }
 
     return(

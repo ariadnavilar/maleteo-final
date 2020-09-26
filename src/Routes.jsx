@@ -16,7 +16,7 @@ function Routes() {
                 <Route path='/login'><LoginViewPage/></Route>
                 <Route path='/findguardian'><FindYourGuardianPage/></Route>
                 <Route path='/guardiansearch'><AvailableGuardianListPage/></Route>
-                <Route path='/selectedguardian'><SelectedGuardianPage/></Route>
+                <Route path='/selectedguardian/:id'><SelectedGuardianPage/></Route>
                 <Route path='/completedbooking'><BookingCompletedPage/></Route>
                 <Route path='/home'><HomePage/></Route>
             </Switch>
