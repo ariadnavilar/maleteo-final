@@ -9,21 +9,51 @@ export default function SelectedGuardianPage() {
     const id = useParams().id;
     const google = window.google;
     const [guardian, setGuardian] = useState([]);
+    const [geoLocation, setLocation] = useState([]);
+
     useEffect(() => {
 
-        API.get('users/guardianes/' + id).then(res =>
-            setGuardian(res.data))
+        API.get('users/guardianes/' + id).then(res =>{
+            
+            setLocation(res.data.geoLocation);
+            setGuardian(res.data);
 
+       })
 
-    }, []);
+    },[]);
 
-    // const lng = guardian.geoLocation[1];
-    // let myLatLng = {lat: lat, lng: lng};
-    // const map = new google.maps.Map(document.getElementById("map"), {
-    //     center: myLatLng,
-    //     zoom: 13,
-    //     mapTypeId: "roadmap",
-    // });
+    function crearMapa(){
+
+    const lat = geoLocation[0];
+    const lng = geoLocation[1];
+
+    console.log(geoLocation);
+
+    let myLatLng = {lat: lat, lng: lng};
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: myLatLng,
+        zoom: 13,
+        mapTypeId: "roadmap",
+    });
+
+    let marker = new google.maps.Marker({
+        position: new google.maps.LatLng(myLatLng),
+        map: map,
+        title: 'Prueba',
+    });
+}
+
+//     const lat = geoLocation[0];
+//     const lng = geoLocation[1];
+
+//     let myLatLng = {lat: lat, lng: lng};
+//     const map = new google.maps.Map(document.getElementById("map"), {
+//         center: myLatLng,
+//         zoom: 13,
+//         mapTypeId: "roadmap",
+//     });
+
+    
 
 
     // let marker = new google.maps.Marker({
@@ -39,6 +69,7 @@ export default function SelectedGuardianPage() {
             </div>
         )
     }
+  
 
     return (
         <div>
