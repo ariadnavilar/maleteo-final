@@ -21,7 +21,7 @@ export default function LoginViewPage(props){
 
         <div>
             <button className="containerarrow">
-                <i className="pi pi-chevron-left gobackbtn" ></i>
+                <span className="pi pi-chevron-left gobackbtn"></span>
             </button>
             <LoginRegisterNavBar/>
             <h2>Inicia sesión ahora</h2>
