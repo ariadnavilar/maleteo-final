@@ -7,10 +7,20 @@ export default function LoginRegisterNavBar() {
         <div className="container">
             <div className="row">
                 <div className="col">
-                    <NavLink to="/login"><h3 className="textlogin">Iniciar sesión</h3></NavLink>
+                    <NavLink to="/login" isActive={(match, location) => {
+                        if(!match) {
+                            return false;
+                        }
+                    }}><h3 className="textlogin">Iniciar sesión</h3>
+                    </NavLink>
                 </div>
                 <div className="col">
-                    <NavLink to="/register"><h3 className="textlogin">Regístrate</h3></NavLink>
+                    <NavLink to="/register" isActive={(match, location) => {
+                        if(!match) {
+                            return false;
+                        }
+                    }}><h3 className="textlogin">Regístrate</h3>
+                    </NavLink>
                 </div>
             </div>
         </div>

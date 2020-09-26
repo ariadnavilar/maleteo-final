@@ -17,6 +17,7 @@ export default function SelectedGuardianPage() {
 
     }, []);
 
+
     // const lng = guardian.geoLocation[1];
     // let myLatLng = {lat: lat, lng: lng};
     // const map = new google.maps.Map(document.getElementById("map"), {
@@ -42,7 +43,6 @@ export default function SelectedGuardianPage() {
 
     return (
         <div>
-
             <div>
                 <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
             </div>
