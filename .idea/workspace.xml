@@ -19,10 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee1ced7-ed61-4e98-beb9-7125f4cbc3b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/shared/UsersNavBar/UsersNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/shared/UsersNavBar/UsersNavBar.jsx" afterDir="false" />
+    <list default="true" id="71bfda57-5217-408e-9087-8f59a22dc957" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/userpages/ProfilePage/Profile.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/userpages/ProfilePage/ProfilePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/components/PrivateRoute/PrivateRoute.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/userpages/AvailableGuardianListPage/components/Location/Location.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/AvailableGuardianListPage/components/Location/Location.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,19 +61,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingDoneDetailPage" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingCompletedPage" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\AvailableGuardianListPage\components\GuardianList" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\guardianpages\PlaceDescriptionPage" />
-      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\guardianpages\EditGuardianProfilePage" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\PreBookingDetailPage\components\BookingDetail" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\PreBookingDetailPage" />
       <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingDoneDetailPage" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingDoneDetailPage" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\bookinggroup\BookingCompletedPage" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\userpages\AvailableGuardianListPage\components\GuardianList" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\guardianpages\PlaceDescriptionPage" />
+      <recent name="C:\Users\ariad\Upgrade\React\maleteo-final\src\pages\guardianpages\EditGuardianProfilePage" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,11 +92,8 @@
       <workItem from="1600771974194" duration="1710000" />
       <workItem from="1600778403669" duration="668000" />
       <workItem from="1600788187260" duration="24192000" />
-<<<<<<< HEAD
       <workItem from="1600867087207" duration="734000" />
-=======
       <workItem from="1600933122819" duration="300000" />
->>>>>>> feature/findguardian
     </task>
     <servers />
   </component>
@@ -116,7 +121,6 @@
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600871599776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-<<<<<<< HEAD
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600815770145" />
     <state x="2444" y="193" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600779071277" />
     <state width="1366" height="182" key="GridCell.Tab.0.bottom" timestamp="1600867484948">
@@ -135,10 +139,8 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1366" height="182" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1280.1024@0.0.1366.768" timestamp="1600867484948" />
-=======
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600871599776" />
     <state x="2444" y="193" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600865126724" />
->>>>>>> feature/findguardian
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600674668263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

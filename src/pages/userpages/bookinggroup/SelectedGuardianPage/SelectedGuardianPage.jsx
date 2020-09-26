@@ -73,7 +73,6 @@ export default function SelectedGuardianPage() {
 
     return (
         <div>
-
             <div>
                 <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
             </div>

@@ -76,9 +76,6 @@ export default function Location(props) {
 
     }, [guardians])
 
-
-
-
     return (
         <div>
             <div className="map" id="map">

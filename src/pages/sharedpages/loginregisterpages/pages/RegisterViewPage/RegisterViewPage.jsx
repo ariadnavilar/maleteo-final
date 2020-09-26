@@ -4,14 +4,17 @@ import "../loginregisterstyles.scss";
 import "../../../../../shared/components/Buttons/buttons.scss";
 import { API } from "../../../../../shared/services/api";
 import LoginRegisterNavBar from "../../shared/components/LoginRegisterNavBar/LoginRegisterNavBar";
+import { useHistory } from "react-router-dom";
 
 export default function RegisterViewPage(){
 
     const { register, handleSubmit, errors } = useForm();
+    const history = useHistory();
 
         const onSubmit = formData => {
         API.post('users/register', formData).then(res => {
             console.log('Usuario registrado');
+            history.push('/login');
         })
     }
 
