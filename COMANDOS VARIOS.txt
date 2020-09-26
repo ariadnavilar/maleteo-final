@@ -8,6 +8,8 @@ npm i nodemon --save
 npm i express --save
 npm i mongoose --save
 
+
+
 3. git branch NOMBRE_RAMA           // para crearla
 4. git checkout NOMBRE_RAMA         // para cambiar a la rama que se ha creado
 5. git add .
@@ -22,12 +24,12 @@ git add .
 git commit -m "nota"
 git push origin NOMBRE_RAMA
 
-//Nos cambiamos a master:
+//Nos cambiamos a develop:
 
-git checkout master
-git pull origin master
+git checkout develop
+git pull origin develop
 git branch --merged
 git merge NOMBRE_RAMA
-git push origin master
+git push origin develop
 
 

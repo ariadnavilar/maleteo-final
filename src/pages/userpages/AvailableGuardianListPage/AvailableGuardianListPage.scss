@@ -1,0 +1,43 @@
+.carouselcontainer {
+  height: 400px;
+  width: 100%;
+  display: inline;
+}
+
+.textinfo {
+  display: inline;
+  font-size: 15px;
+  color: black;
+  margin-top: 0;
+  pading-top: 0;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.homeimg {
+  width: 100%;
+  object-fit: fill;
+  height: 150px;
+}
+
+.personalimg {
+  height: 75px;
+  width: 50%;
+  display: flex;
+  border-radius: 15px;
+}
+
+.p-carousel-content {
+  padding-top: 5px;
+  height: 220px;
+}
+
+.inlinediv {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.guardianslide {
+  box-shadow: 1px 1px 1px 1px #E7E7E7;
+  border-top: 3px solid #61dafb;
+}

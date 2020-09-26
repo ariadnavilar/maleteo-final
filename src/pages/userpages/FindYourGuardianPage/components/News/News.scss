@@ -1,0 +1,19 @@
+.titlesection {
+  padding-top: 20px;
+}
+
+.blogimg {
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.blogtitle {
+  position: relative;
+  transform: translate(0px, -430%);
+  color: rgb(246, 143, 36);
+    &.globe {
+      transform: translate(0px, -110px);
+      font-size: 20px;
+    }
+}
