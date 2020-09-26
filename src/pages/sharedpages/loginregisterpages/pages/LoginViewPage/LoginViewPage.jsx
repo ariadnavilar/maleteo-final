@@ -13,7 +13,6 @@ export default function LoginViewPage(props){
         API.post("users/login", formData).then(res => {
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("user", JSON.stringify(res.data.user));
-            localStorage.setItem("isLogged", JSON.stringify(res.data.logged));
             props.setIsLogged(true);
             history.push('/findguardian');
         })
@@ -22,7 +21,7 @@ export default function LoginViewPage(props){
 
         <div>
             <button className="containerarrow">
-                <i className="pi pi-chevron-left gobackbtn" ></i>
+                <span className="pi pi-chevron-left gobackbtn"></span>
             </button>
             <LoginRegisterNavBar/>
             <h2>Inicia sesión ahora</h2>
