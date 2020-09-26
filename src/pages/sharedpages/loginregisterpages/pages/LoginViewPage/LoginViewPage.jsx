@@ -2,19 +2,22 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { API } from "../../../../../shared/services/api";
 import LoginRegisterNavBar from "../../shared/components/LoginRegisterNavBar/LoginRegisterNavBar";
+import { useHistory } from "react-router-dom";
 
-export default function LoginViewPage(){
+export default function LoginViewPage(props){
 
     const { register, handleSubmit, errors } = useForm();
+    const history = useHistory();
 
     const onSubmit = formData => {
         API.post("users/login", formData).then(res => {
             localStorage.setItem("token", res.data.token);
-            localStorage.setItem("user", JSON.stringify(res.data.name))
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            localStorage.setItem("isLogged", JSON.stringify(res.data.logged));
+            props.setIsLogged(true);
+            history.push('/findguardian');
         })
-
     }
-
     return(
 
         <div>
