@@ -20,17 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71bfda57-5217-408e-9087-8f59a22dc957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/userpages/ProfilePage/Profile.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/userpages/ProfilePage/ProfilePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/components/PrivateRoute/PrivateRoute.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/AvailableGuardianListPage/components/Location/Location.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/AvailableGuardianListPage/components/Location/Location.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
