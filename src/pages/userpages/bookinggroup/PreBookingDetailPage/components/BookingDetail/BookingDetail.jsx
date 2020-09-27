@@ -4,18 +4,28 @@ import {Link} from "react-router-dom";
 import {useHistory} from "react-router-dom";
 import {UsersNavBar} from "../../../../shared/UsersNavBar/UsersNavBar";
 
+
 export function BookingDetail() {
 
+    const fechasdereserva = localStorage.datasearch;
+    let llegada = JSON.parse(fechasdereserva);
+    let deposit = llegada['deposit'];
+    let withdrawal = llegada['withdrawal'];
+    let luggage = llegada['luggage'];
 
 
+    console.log(fechasdereserva);
+    console.log(deposit);
+    console.log(withdrawal);
+    console.log(luggage);
 
 
     return (
         <div>
+
             <div className="encabezado">
                 <Link to="/guardiansearch"><i className="pi pi-chevron-left"
                                               style={{'fontSize': '1.5em', 'alignContent': 'left'}}/></Link>
-
                 <p></p>
                 <p style={{'fontSize': '15pt'}}>Detalles de tu reserva</p>
                 <div>
@@ -23,21 +33,24 @@ export function BookingDetail() {
                 <p></p>
 
             </div>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-4">
-                        <h5>Llegada</h5>
-                        <h7>30 de sep</h7>
-                    </div>
-                    <div className="col-4">
-                        <h5>Recogida</h5>
-                        <h7>30 de sep</h7>
-                    </div>
-                    <div className="col-4">
-                        <h5>Equipaje</h5>
-                        <h7>1 equipaje</h7>
+            <div className="reservas">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-4">
+                            <h5>Llegada</h5>
+                            <p style={{'font-size': '14px'}}>{deposit}</p>
+                        </div>
+                        <div className="col-4">
+                            <h5>Recogida</h5>
+                            <p style={{'font-size': '14px'}}>{withdrawal}</p>
+                        </div>
+                        <div className="col-4">
+                            <h5>Equipaje</h5>
+                            <p style={{'font-size': '14px'}}>{luggage} Equipajes</p>
+                        </div>
                     </div>
                 </div>
+
                 <p></p>
 
                 <div className="container-fluid">
@@ -76,18 +89,16 @@ export function BookingDetail() {
 
             <p></p>
 
+            <div className="centered">
+                <Link to="/completedbooking">
+                    <button className="orangebtn">Reservar</button>
+                </Link>
+            </div>
 
-            <Link to="/completedbooking">
-                <button className="botonreserva">Reservar</button>
-            </Link>
 
             <UsersNavBar/>
 
-
-
         </div>
-
-
 
 
     );

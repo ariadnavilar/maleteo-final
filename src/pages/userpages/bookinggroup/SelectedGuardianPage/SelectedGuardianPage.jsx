@@ -179,10 +179,12 @@ export default function SelectedGuardianPage() {
 
             <p>Otros lockers cerca de ti</p>
 
+            <div className="centered">
 
             <Link to="/BookingDetail">
-                <button className="botonreserva">Reservar Ahora</button>
+                <button className="orangebtn">Reservar Ahora</button>
             </Link>
+            </div>
 
 
         </div>
