@@ -9,6 +9,7 @@ import BookingCompletedPage from "./pages/userpages/bookinggroup/BookingComplete
 import AvailableGuardianListPage from "./pages/userpages/AvailableGuardianListPage/AvailableGuardianListPage";
 import ProfilePage from "./pages/userpages/ProfilePage/ProfilePage";
 import PrivateRoute from "./shared/components/PrivateRoute/PrivateRoute"
+import FirstWelcomePage from "./pages/sharedpages/FirstWelcomePage/FirstWelcomePage";
 
 function Routes() {
 
@@ -26,6 +27,8 @@ function Routes() {
                 <PrivateRoute path='/completedbooking'><BookingCompletedPage/></PrivateRoute>
                 <PrivateRoute path='/profile'><ProfilePage  isLogged={isLogged} setIsLogged={setIsLogged}/></PrivateRoute>
                 <Route path='/home'><HomePage/></Route>
+                <Route path='/firstpage'><FirstWelcomePage/></Route>
+
             </Switch>
         </Router>
     );
