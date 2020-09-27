@@ -9,6 +9,7 @@ import BookingCompletedPage from "./pages/userpages/bookinggroup/BookingComplete
 import AvailableGuardianListPage from "./pages/userpages/AvailableGuardianListPage/AvailableGuardianListPage";
 import ProfilePage from "./pages/userpages/ProfilePage/ProfilePage";
 import PrivateRoute from "./shared/components/PrivateRoute/PrivateRoute"
+import {BookingDetail} from "./pages/userpages/bookinggroup/PreBookingDetailPage/components/BookingDetail/BookingDetail";
 
 function Routes() {
 
@@ -24,6 +25,7 @@ function Routes() {
                 <PrivateRoute path='/selectedguardian/:id'><SelectedGuardianPage/></PrivateRoute>
                 <PrivateRoute path='/completedbooking'><BookingCompletedPage/></PrivateRoute>
                 <PrivateRoute path='/profile'><ProfilePage  isLogged={isLogged} setIsLogged={setIsLogged}/></PrivateRoute>
+                <Route path='/BookingDetail'><BookingDetail/></Route>
                 <Route path='/'><HomePage/></Route>
             </Switch>
         </Router>
