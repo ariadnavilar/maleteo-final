@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {API} from "../../../../shared/services/api";
 import {Carousel} from "primereact/carousel";
 import "./SelectedGuardianPage.scss"
@@ -16,7 +16,6 @@ export default function SelectedGuardianPage() {
 
 
     }, []);
-
 
     // const lng = guardian.geoLocation[1];
     // let myLatLng = {lat: lat, lng: lng};
@@ -35,7 +34,7 @@ export default function SelectedGuardianPage() {
 
     const itemTemplate = (image) => {
         return (
-            <div>
+            <div className="fotodelacasa">
                 <img src={image}></img>
             </div>
         )
@@ -46,7 +45,6 @@ export default function SelectedGuardianPage() {
             <div>
                 <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
             </div>
-            <p></p>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-8">
@@ -60,16 +58,28 @@ export default function SelectedGuardianPage() {
             </div>
 
             <div className="estrellas">
-                <i className="pi pi-star" style={{'color': 'yellow'}}></i>
-                <i className="pi pi-star" style={{'color': 'yellow'}}></i>
-                <i className="pi pi-star" style={{'color': 'yellow'}}></i>
-                <i className="pi pi-star" style={{'color': 'yellow'}}></i>
-                <i className="pi pi-star" style={{'color': 'yellow'}}></i>
+                <i className="pi pi-star"/>
+                <i className="pi pi-star"/>
+                <i className="pi pi-star"/>
+                <i className="pi pi-star"/>
+                <i className="pi pi-star"/>
             </div>
             <p></p>
-            <p style={{'color': 'red', 'fontSize': '9px',}}>¡Rápido no le queda mucho espacio! <i className="pi pi-briefcase
-" style={{'fontSize': '1.5em', 'color': '#FF9B33'}}></i></p>
+            <div className="container-fluid">
+                <div className="row">
+
+                    <div className="col-8">
+                        <p className="titulorojopromocion">¡Rápido no le queda mucho espacio!</p>
+                    </div>
+                    <div className="col-4">
+                        <i className="pi pi-briefcase"/>
+                    </div>
+
+                </div>
+            </div>
+
             <p></p>
+
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-2">
@@ -148,7 +158,7 @@ export default function SelectedGuardianPage() {
                     </div>
                     <div className="col-10">
                         <h6>Juan P</h6>
-                        <p>Marta responde rápido y estuvo muy atenta. Nos dió
+                        <p>responde rápido y estuvo muy atenta. Nos dió
                             muchos consejos sobre Madrid y pudimos hacer turismo tranquilamente. Su ubicación nos vino
                             genial.</p>
                     </div>
@@ -157,6 +167,7 @@ export default function SelectedGuardianPage() {
             </div>
 
             <h5>Normas de {guardian.name}</h5>
+
 
             <p>Cómo debe ser tu maleta</p>
 
@@ -169,7 +180,11 @@ export default function SelectedGuardianPage() {
             <p>Otros lockers cerca de ti</p>
 
 
-            <button className="botonreserva">Reservar Ahora</button>
+            <Link to="/BookingDetail">
+                <button className="botonreserva">Reservar Ahora</button>
+            </Link>
+
+
         </div>
     )
 }

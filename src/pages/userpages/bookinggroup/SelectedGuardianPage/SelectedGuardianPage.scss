@@ -11,18 +11,18 @@
 
 .fotoguardian {
     height: 64pt;
+    width: auto;
     align-items: center;
     border-radius: 7px;
-
 }
 
-.reseña1{
-    width:40px;
-    height:40px;
-    border-radius:150px;
+.reseña1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 150px;
 }
 
-.botonreserva{
+.botonreserva {
     margin-left: 60%;
     background: #F68F24;
     color: white;
@@ -30,3 +30,25 @@
     border: 0px solid;
     box-shadow: 2px 2px 10px black;
 }
+
+.estrellas {
+    display: inline-flex;
+
+    .pi-star:before {
+        color: yellow;
+    }
+}
+
+.titulorojopromocion {
+    display: flex;
+    align-items: center;
+    color: red;
+    font-Size: 8pt;
+}
+.pi-briefcase:before {
+    display: flex;
+    align-items: center;
+    font-Size: 9pt;
+    color: #ff8200;
+}
+
