@@ -1,19 +1,10 @@
-.navbar {
-  position:inherit;
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-  height: auto;
+.navbar-general {
+  bottom:0;
   background: #ffffff;
+  padding-top: 5%;
   color: black;
-  border-top: 1px solid #E7E7E7;
-  margin-left: -15px;
-  margin-right: -15px;
-}
+  font-size: 2.7em;
+  text-decoration: none;
+  color: black;
 
-.pi {
-  &.navicons {
-    font-size: 30px;
-    color: black;
-  }
 }
