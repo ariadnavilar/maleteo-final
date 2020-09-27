@@ -10,6 +10,7 @@ import AvailableGuardianListPage from "./pages/userpages/AvailableGuardianListPa
 import ProfilePage from "./pages/userpages/ProfilePage/ProfilePage";
 import PrivateRoute from "./shared/components/PrivateRoute/PrivateRoute"
 import FirstWelcomePage from "./pages/sharedpages/FirstWelcomePage/FirstWelcomePage";
+import SecondWelcomePage from "./pages/sharedpages/SecondWelcomePage/SecondWelcomePage";
 
 function Routes() {
 
@@ -28,7 +29,7 @@ function Routes() {
                 <PrivateRoute path='/profile'><ProfilePage  isLogged={isLogged} setIsLogged={setIsLogged}/></PrivateRoute>
                 <Route path='/home'><HomePage/></Route>
                 <Route path='/firstpage'><FirstWelcomePage/></Route>
-
+                <Route path='/secondpage'><SecondWelcomePage/></Route>
             </Switch>
         </Router>
     );
