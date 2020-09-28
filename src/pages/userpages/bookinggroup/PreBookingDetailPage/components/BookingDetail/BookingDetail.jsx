@@ -22,17 +22,16 @@ export function BookingDetail() {
 
     return (
         <div>
-            <div className="encabezado">
-                <Link to="/guardiansearch"><i className="pi pi-chevron-left"/></Link>
-            </div>
-            <br/>
+            <button className="containerarrow">
+                <Link to="/guardiansearch"><span className="pi pi-chevron-left gobackbtn"></span></Link>
+            </button>
             <p style={{'fontSize': '15pt'}}>Detalles de tu reserva</p>
             <div className="reservas">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-4">
                             <h5>Llegada</h5>
-                            <p style={{'font-size': '14px'}}>{deposit}</p>
+                            <p>{deposit}</p>
                         </div>
                         <div className="col-4">
                             <h5>Recogida</h5>
