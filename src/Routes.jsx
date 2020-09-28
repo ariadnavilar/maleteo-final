@@ -17,6 +17,7 @@ function Routes() {
     return (
         <Router>
             <Switch>
+                <Route path='/selectedguardian/:id'><SelectedGuardianPage/></Route>
                 <Route path='/register'><RegisterViewPage/></Route>
                 <Route path='/login'><LoginViewPage isLogged={isLogged} setIsLogged={setIsLogged}/></Route>
                 <PrivateRoute path='/findguardian'><FindYourGuardianPage/></PrivateRoute>

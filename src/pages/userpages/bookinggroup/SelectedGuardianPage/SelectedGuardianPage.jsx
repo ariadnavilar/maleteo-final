@@ -9,6 +9,8 @@ export default function SelectedGuardianPage() {
     const id = useParams().id;
     const google = window.google;
     const [guardian, setGuardian] = useState([]);
+    const [geoLocation, setLocation] = useState([]);
+
     useEffect(() => {
 
         API.get('users/guardianes/' + id).then(res =>{
@@ -53,6 +55,7 @@ export default function SelectedGuardianPage() {
             </div>
         )
     }
+  
 
     return (
         <div>
