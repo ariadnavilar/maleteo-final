@@ -11,13 +11,23 @@
 }
 
 .pi {
-  &.navicons {
+  &.icons {
     font-size: 30px;
-    color: black;
-    &.orangeicon {
-      color: rgb(246, 143, 36);
-    }
   }
+}
+
+.navicons {
+  color: black;
+  font-size: 30px;
+}
+
+.navicons:hover {
+  color: none;
+}
+
+.orangeicon {
+  color: rgb(246, 143, 36);
+  font-size: 30px;
 }
 
 .separator {

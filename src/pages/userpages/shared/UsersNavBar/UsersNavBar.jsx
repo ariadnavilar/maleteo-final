@@ -8,10 +8,18 @@ export function UsersNavBar() {
         <div className="align-items-end">
             <div className="separator"></div>
             <div className="navbar">
-                <NavLink exact activeClassName="orange" to="/"><span className="pi pi-home navicons"></span></NavLink>
-                <Link to="guardiansearch"><span className="pi pi-search navicons"></span></Link>
-                <span className="pi pi-comments navicons"></span>
-                <NavLink exact activeClassName="orange" to="/profile"><span className="pi pi-user navicons"></span></NavLink>
+                <NavLink exact to="/findguardian" activeClassName="orangeicon" className="navicons">
+                    <span className="pi pi-home icons"></span>
+                </NavLink>
+                <NavLink exact to="guardiansearch" activeClassName="orangeicon" className="navicons">
+                    <span className="pi pi-search icons"></span>
+                </NavLink>
+                <NavLink exact to="/messages" activeClassName="orangeicon" className="navicons">
+                    <span className="pi pi-comments icons"></span>
+                </NavLink>
+                <NavLink exact to="/profile" activeClassName="orangeicon" className="navicons">
+                    <span className="pi pi-user icons"></span>
+                </NavLink>
             </div>
         </div>
     );
