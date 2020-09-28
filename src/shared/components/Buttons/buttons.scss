@@ -40,6 +40,13 @@
   border-color: rgb(246, 143, 36);
   box-shadow: none;
   cursor: pointer;
+  &.sm {
+    width: 45%;
+    height: 45px;
+    margin-left: 3px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
 }
 
 .whitebtn:hover {

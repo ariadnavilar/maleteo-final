@@ -18,7 +18,7 @@ export default function AvailableGuardianListPage() {
 
     const itemTemplate = (guardian) =>{
         return  (
-            <div className="p-carousel-content">
+            <div className="p-carousel-content guardianlist">
                 <Link to={"/selectedguardian/" + guardian._id}>
                     <div className="row guardianslide">
                         <div className="inlinediv col-6">
@@ -30,7 +30,6 @@ export default function AvailableGuardianListPage() {
                         </div>
                     </div>
                 </Link>
-                <UsersNavBar/>
             </div>
         )
     }
@@ -39,6 +38,7 @@ export default function AvailableGuardianListPage() {
                     <div>
                         <Location guardians={guardians}/>
                         <Carousel value={guardians} itemTemplate={itemTemplate}></Carousel>
+                        <UsersNavBar/>
                     </div>
     )
 }

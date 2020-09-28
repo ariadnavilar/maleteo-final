@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
-import "./BookingDetail.scss";
 import {Link} from "react-router-dom";
-import {UsersNavBar} from "../../../../shared/UsersNavBar/UsersNavBar";
-import { API } from '../../../../../../shared/services/api';
+import {UsersNavBar} from "../../shared/UsersNavBar/UsersNavBar";
+import { API } from '../../../../shared/services/api';
 
-
-
-export function BookingDetail() {
-
-    
+export default function PreBookingDetailPage() {
 
     const fechasdereserva = localStorage.datasearch;
     const user = JSON.parse(localStorage.user);
@@ -26,14 +21,12 @@ export function BookingDetail() {
         "client": emailUser,
         "guardian": guardian.id
     });
-   
 
     const saveDates =() => {
         API.post("bookings/register", data).then(res => {
             console.log('Reserva completada');
         })
     }
-
 
     return (
         <div>

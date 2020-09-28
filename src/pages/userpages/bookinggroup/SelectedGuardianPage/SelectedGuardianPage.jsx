@@ -17,10 +17,7 @@ export default function SelectedGuardianPage() {
             setGuardian(res.data);
             pintarMapa(res.data);
 
-            }
-            )
-
-
+            })
     }, []);
 
     function pintarMapa(guardian){
@@ -33,13 +30,13 @@ export default function SelectedGuardianPage() {
             mapTypeId: "roadmap",
         });
 
-
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(myLatLng),
             map: map,
             title: 'Prueba',
         });
     }
+
     const saveGuardian = () =>{
         let dataGuardian = {
             "id": guardian._id,
@@ -209,7 +206,7 @@ export default function SelectedGuardianPage() {
                 <p>Otros lockers cerca de ti</p>
 
                 <div className="centered">
-                    <Link to="/BookingDetail">
+                    <Link to="/prebooking">
                         <button className="orangebtn" onClick={saveGuardian}>Reservar Ahora</button>
                     </Link>
                 </div>

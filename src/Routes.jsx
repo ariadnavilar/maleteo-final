@@ -11,7 +11,8 @@ import ProfilePage from "./pages/userpages/ProfilePage/ProfilePage";
 import PrivateRoute from "./shared/components/PrivateRoute/PrivateRoute"
 import FirstWelcomePage from "./pages/sharedpages/FirstWelcomePage/FirstWelcomePage";
 import SecondWelcomePage from "./pages/sharedpages/SecondWelcomePage/SecondWelcomePage";
-import {BookingDetail} from "./pages/userpages/bookinggroup/PreBookingDetailPage/components/BookingDetail/BookingDetail";
+import PreBookingDetailPage from "./pages/userpages/bookinggroup/PreBookingDetailPage/PreBookingDetailPage";
+import BookingDoneDetailPage from "./pages/userpages/bookinggroup/BookingDoneDetailPage/BookingDoneDetailPage"
 
 function Routes() {
     
@@ -25,8 +26,9 @@ function Routes() {
                 <PrivateRoute path='/findguardian'><FindYourGuardianPage/></PrivateRoute>
                 <PrivateRoute path='/guardiansearch'><AvailableGuardianListPage/></PrivateRoute>
                 <PrivateRoute path='/selectedguardian/:id'><SelectedGuardianPage/></PrivateRoute>
+                <PrivateRoute path='/bookings/:id'><BookingDoneDetailPage/></PrivateRoute>
                 <PrivateRoute path='/completedbooking'><BookingCompletedPage/></PrivateRoute>
-                <PrivateRoute path='/BookingDetail'><BookingDetail/></PrivateRoute>            
+                <PrivateRoute path='/prebooking'><PreBookingDetailPage/></PrivateRoute>
                 <PrivateRoute path='/profile'><ProfilePage  isLogged={isLogged} setIsLogged={setIsLogged}/></PrivateRoute>
                 <Route path='/firstpage'><FirstWelcomePage/></Route>
                 <Route path='/secondpage'><SecondWelcomePage/></Route>
