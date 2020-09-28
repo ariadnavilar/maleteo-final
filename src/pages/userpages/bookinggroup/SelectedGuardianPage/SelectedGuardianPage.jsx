@@ -38,6 +38,13 @@ export default function SelectedGuardianPage() {
             title: 'Prueba',
         });
     }
+    const saveGuardian = () =>{
+        let dataGuardian = {
+            "id": guardian._id,
+            "name": guardian.name
+        }
+        localStorage.setItem("dataGuardian", JSON.stringify(dataGuardian));
+    }
 
     const itemTemplate = (image) => {
         return (
@@ -200,7 +207,7 @@ export default function SelectedGuardianPage() {
 
                 <div className="centered">
                     <Link to="/BookingDetail">
-                        <button className="orangebtn">Reservar Ahora</button>
+                        <button className="orangebtn" onClick={saveGuardian}>Reservar Ahora</button>
                     </Link>
                 </div>
 
