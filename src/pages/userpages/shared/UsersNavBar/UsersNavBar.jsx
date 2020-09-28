@@ -4,12 +4,23 @@ import {Link} from "react-router-dom";
 
 export function UsersNavBar() {
     return (
-        <div className="navbar">
-            <Link to="/"><span className="pi pi-home navicons"></span></Link>
-            <Link to="guardiansearch"><span className="pi pi-search navicons"></span></Link>
-            <span className="pi pi-comments navicons"></span>
-            <Link to="/profile"><span className="pi pi-user navicons"></span></Link>
 
+        <div className="navbar-general">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-3">
+                        <Link to="/"><i className="pi pi-home"/></Link>
+                    </div>
+                    <div className="col-3">
+                        <Link to="/guardiansearch"><i className="pi pi-search"/></Link>
+                    </div>
+                    <div className="col-3">
+                        <i className="pi pi-comments"/>
+                    </div>
+                    <div className="col-3"><i className="pi pi-user"/>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
