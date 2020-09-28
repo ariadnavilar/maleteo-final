@@ -14,10 +14,12 @@ import SecondWelcomePage from "./pages/sharedpages/SecondWelcomePage/SecondWelco
 import {BookingDetail} from "./pages/userpages/bookinggroup/PreBookingDetailPage/components/BookingDetail/BookingDetail";
 
 function Routes() {
+    
+    const [isLogged, setIsLogged] = useState(!!localStorage.getItem('token'));
+    
     return (
         <Router>
             <Switch>
-                <Route path='/selectedguardian/:id'><SelectedGuardianPage/></Route>
                 <Route path='/register'><RegisterViewPage/></Route>
                 <Route path='/login'><LoginViewPage isLogged={isLogged} setIsLogged={setIsLogged}/></Route>
                 <PrivateRoute path='/findguardian'><FindYourGuardianPage/></PrivateRoute>
@@ -31,3 +33,7 @@ function Routes() {
                 <Route path='/'><HomePage/></Route>
             </Switch>
         </Router>
+    );
+}
+
+export default Routes;
