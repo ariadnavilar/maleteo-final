@@ -11,27 +11,33 @@ export default function SelectedGuardianPage() {
     const [guardian, setGuardian] = useState([]);
     useEffect(() => {
 
-        API.get('users/guardianes/' + id).then(res =>
-            setGuardian(res.data))
+        API.get('users/guardianes/' + id).then(res =>{
+            setGuardian(res.data);
+            pintarMapa(res.data);
+
+            }
+            )
 
 
     }, []);
 
+    function pintarMapa(guardian){
+        const lat = guardian.geoLocation[0]
+        const lng = guardian.geoLocation[1];
+        let myLatLng = {lat: lat, lng: lng};
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: myLatLng,
+            zoom: 13,
+            mapTypeId: "roadmap",
+        });
 
-    // const lng = guardian.geoLocation[1];
-    // let myLatLng = {lat: lat, lng: lng};
-    // const map = new google.maps.Map(document.getElementById("map"), {
-    //     center: myLatLng,
-    //     zoom: 13,
-    //     mapTypeId: "roadmap",
-    // });
 
-
-    // let marker = new google.maps.Marker({
-    //     position: new google.maps.LatLng(myLatLng),
-    //     map: map,
-    //     title: 'Prueba',
-    // });
+        let marker = new google.maps.Marker({
+            position: new google.maps.LatLng(myLatLng),
+            map: map,
+            title: 'Prueba',
+        });
+    }
 
     const itemTemplate = (image) => {
         return (
