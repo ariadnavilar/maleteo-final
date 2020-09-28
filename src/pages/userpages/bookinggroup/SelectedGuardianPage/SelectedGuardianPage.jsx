@@ -9,28 +9,44 @@ export default function SelectedGuardianPage() {
     const id = useParams().id;
     const google = window.google;
     const [guardian, setGuardian] = useState([]);
+    const [geoLocation, setLocation] = useState([]);
+
     useEffect(() => {
 
-        API.get('users/guardianes/' + id).then(res =>
-            setGuardian(res.data))
+        API.get('users/guardianes/' + id).then(res =>{
+            setGuardian(res.data);
+            pintarMapa(res.data);
+
+            }
+            )
 
 
     }, []);
 
-    // const lng = guardian.geoLocation[1];
-    // let myLatLng = {lat: lat, lng: lng};
-    // const map = new google.maps.Map(document.getElementById("map"), {
-    //     center: myLatLng,
-    //     zoom: 13,
-    //     mapTypeId: "roadmap",
-    // });
+    function pintarMapa(guardian){
+        const lat = guardian.geoLocation[0]
+        const lng = guardian.geoLocation[1];
+        let myLatLng = {lat: lat, lng: lng};
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: myLatLng,
+            zoom: 13,
+            mapTypeId: "roadmap",
+        });
 
 
-    // let marker = new google.maps.Marker({
-    //     position: new google.maps.LatLng(myLatLng),
-    //     map: map,
-    //     title: 'Prueba',
-    // });
+        let marker = new google.maps.Marker({
+            position: new google.maps.LatLng(myLatLng),
+            map: map,
+            title: 'Prueba',
+        });
+    }
+    const saveGuardian = () =>{
+        let dataGuardian = {
+            "id": guardian._id,
+            "name": guardian.name
+        }
+        localStorage.setItem("dataGuardian", JSON.stringify(dataGuardian));
+    }
 
     const itemTemplate = (image) => {
         return (
@@ -39,6 +55,7 @@ export default function SelectedGuardianPage() {
             </div>
         )
     }
+  
 
     return (
         <div>
@@ -193,7 +210,7 @@ export default function SelectedGuardianPage() {
 
                 <div className="centered">
                     <Link to="/BookingDetail">
-                        <button className="orangebtn">Reservar Ahora</button>
+                        <button className="orangebtn" onClick={saveGuardian}>Reservar Ahora</button>
                     </Link>
                 </div>
 

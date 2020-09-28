@@ -1,23 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./BookingDetail.scss";
 import {Link} from "react-router-dom";
-import {useHistory} from "react-router-dom";
 import {UsersNavBar} from "../../../../shared/UsersNavBar/UsersNavBar";
+import { API } from '../../../../../../shared/services/api';
+
 
 
 export function BookingDetail() {
 
+    
+
     const fechasdereserva = localStorage.datasearch;
+    const user = JSON.parse(localStorage.user);
+    const guardian = JSON.parse(localStorage.dataGuardian);
     let llegada = JSON.parse(fechasdereserva);
     let deposit = llegada['deposit'];
     let withdrawal = llegada['withdrawal'];
     let luggage = llegada['luggage'];
+    let emailUser = user.email;
 
+    const [data, setData] = useState({
+        "initialDate": deposit,
+        "finalDate": withdrawal,
+        "nSuitcases": Number(luggage),
+        "client": emailUser,
+        "guardian": guardian.id
+    });
+   
 
-    console.log(fechasdereserva);
-    console.log(deposit);
-    console.log(withdrawal);
-    console.log(luggage);
+    const saveDates =() => {
+        API.post("bookings/register", data).then(res => {
+            console.log('Reserva completada');
+        })
+    }
 
 
     return (
@@ -101,7 +116,7 @@ export function BookingDetail() {
 
             <div className="centered">
                 <Link to="/completedbooking">
-                    <button className="orangebtn">Reservar</button>
+                    <button className="orangebtn" onClick={saveDates}>Reservar</button>
                 </Link>
             </div>
 

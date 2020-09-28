@@ -14,9 +14,9 @@ import SecondWelcomePage from "./pages/sharedpages/SecondWelcomePage/SecondWelco
 import {BookingDetail} from "./pages/userpages/bookinggroup/PreBookingDetailPage/components/BookingDetail/BookingDetail";
 
 function Routes() {
-
+    
     const [isLogged, setIsLogged] = useState(!!localStorage.getItem('token'));
-
+    
     return (
         <Router>
             <Switch>
