@@ -22,17 +22,11 @@ export function BookingDetail() {
 
     return (
         <div>
-
             <div className="encabezado">
-                <Link to="/guardiansearch"><i className="pi pi-chevron-left"
-                                              style={{'fontSize': '1.5em', 'alignContent': 'left'}}/></Link>
-                <p></p>
-                <p style={{'fontSize': '15pt'}}>Detalles de tu reserva</p>
-                <div>
-                </div>
-                <p></p>
-
+                <Link to="/guardiansearch"><i className="pi pi-chevron-left"/></Link>
             </div>
+            <br/>
+            <p style={{'fontSize': '15pt'}}>Detalles de tu reserva</p>
             <div className="reservas">
                 <div className="container-fluid">
                     <div className="row">
@@ -50,44 +44,61 @@ export function BookingDetail() {
                         </div>
                     </div>
                 </div>
+                <br/>
 
-                <p></p>
-
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-6">
-                            <h7>Primeras 24 horas
-                                6,00 x 2 equipajes
-                            </h7>
-                            <p></p>
-                            <h7>Gastos de gestión</h7>
-                            <p></p>
-
-                            <h7>Servicio asegurado
-                                hasta 1000€
-                            </h7>
-                            <p></p>
-
-                            <h7>Total</h7>
-                        </div>
-                        <div className="col-6">
-                            <h7> 10 €</h7>
-                            <p></p>
+                <div className="contenidoreserva">
+                    <div className="container-fluid">
 
 
-                            <h7> 2 €</h7>
-                            <p></p>
-                            <h7>Gratis</h7>
-                            <p></p>
 
-                            <h7>12€</h7>
 
-                        </div>
+
+                            <div className="row">
+                                <div className="col-6">
+                                    <p>Primeras 24 horas 6,00 x 2 equipajes</p>
+                                </div>
+                                <div className="col-6">
+                                    <p>10€</p>
+                                </div>
+                            </div>
+
+
+
+
+                            <div className="row">
+                                <div className="col-6">
+                                    <p>Gastos de gestión</p>
+                                </div>
+                                <div className="col-6">
+                                    <p>2 €</p>
+                                </div>
+                            </div>
+
+
+                            <div className="row">
+                                <div className="col-6">
+                                    <p>Servicio asegurado hasta 1000€</p>
+                                </div>
+                                <div className="col-6">
+                                    <p>Gratis</p>
+                                </div>
+                            </div>
+
+
+                            <div className="row">
+                                <div className="col-6">
+                                    <p>Total</p>
+                                </div>
+                                <div className="col-6">
+                                    <p>12€</p>
+                                </div>
+                            </div>
+
+
                     </div>
                 </div>
             </div>
 
-            <p></p>
 
             <div className="centered">
                 <Link to="/completedbooking">

@@ -22,24 +22,30 @@
     border-radius: 150px;
 }
 
-.estrellas {
-    display: inline-flex;
 
-    .pi-star:before {
-        color: yellow;
+.estrellas{
+    display: flex;
+    .pi{
+        &.pi-star{
+            display: flex;
+            color: yellow;
+        }
     }
 }
 
-.titulorojopromocion {
+.menurojo {
     display: flex;
     align-items: center;
     color: red;
     font-Size: 8pt;
+    .pi {
+        &.-briefcase {
+            align-items: center;
+            font-Size: 9pt;
+            color: #ff8200;
+            width: 8pt;
+        }
+    }
 }
-.pi-briefcase:before {
-    display: flex;
-    align-items: center;
-    font-Size: 9pt;
-    color: #ff8200;
-}
+
 
