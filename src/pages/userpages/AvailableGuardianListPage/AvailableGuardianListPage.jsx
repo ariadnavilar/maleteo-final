@@ -4,6 +4,8 @@ import { API} from "../../../shared/services/api";
 import { Carousel } from "primereact/carousel";
 import { Link} from "react-router-dom";
 import "./AvailableGuardianListPage.scss";
+import {UsersNavBar} from "../shared/UsersNavBar/UsersNavBar";
+import "../shared/UsersNavBar/UsersNavBar.scss"
 
 export default function AvailableGuardianListPage() {
 
@@ -28,6 +30,7 @@ export default function AvailableGuardianListPage() {
                         </div>
                     </div>
                 </Link>
+                <UsersNavBar/>
             </div>
         )
     }

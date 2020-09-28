@@ -59,6 +59,12 @@
   padding: 10px 10px 10px 0;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: none;
+}
+
+.closewindow {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 // <-------------SOCIAL MEDIA------------->

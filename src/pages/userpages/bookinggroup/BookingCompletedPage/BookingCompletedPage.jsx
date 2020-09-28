@@ -1,30 +1,29 @@
 import React from "react";
-import "./BookingCompletedPage.scss"
+import "./BookingCompletedPage.scss";
+import {useHistory} from "react-router-dom";
 
 
 export default function BookingCompletedPage() {
 
+    const history = useHistory();
+
+    const findRedirect = () => {
+        history.push("/findguardian")
+    }
+
     return (
-
-        <div className="logoDiv">
-            <div className="firstline">
-                <div className="parrafo1">
-                    <h2>Reserva Completada</h2>
-                </div>
-                <div className="icone">
-                    <span className ="pi pi-times"></span>
-                </div>
+        <div>
+            <div className="closewindow">
+                <button onClick={findRedirect} className="gobackbtn">
+                    <span className ="pi pi-times completed"></span>
+                </button>
             </div>
-            <div className="logofenix">
-                <img src={require("./assets/img/fenix.png")}/>
+            <h3>Reserva Completada</h3>
+            <div className="centered">
+                <img className="logofenix" src={require("./assets/img/fenix.png")}/>
             </div>
-            <div className="parrafo2">
-                <h3>BE FREE!</h3>
-            </div>
-            <div className="parrafo3">
-                <p>Contacta ya con tu guardian y espera que acepte tu reserva</p>
-            </div>
-
+            <h5>BE FREE!</h5>
+            <p>Contacta ya con tu guardián y espera que acepte tu reserva</p>
         </div>
 
     )

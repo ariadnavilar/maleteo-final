@@ -20,17 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71bfda57-5217-408e-9087-8f59a22dc957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/userpages/ProfilePage/Profile.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/userpages/ProfilePage/ProfilePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/components/PrivateRoute/PrivateRoute.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/LoginViewPage/LoginViewPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/pages/RegisterViewPage/RegisterViewPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sharedpages/loginregisterpages/shared/components/LoginRegisterNavBar/LoginRegisterNavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/AvailableGuardianListPage/components/Location/Location.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/AvailableGuardianListPage/components/Location/Location.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/SelectedGuardianPage/SelectedGuardianPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/BookingCompletedPage/BookingCompletedPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/BookingCompletedPage/BookingCompletedPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/BookingCompletedPage/BookingCompletedPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/bookinggroup/BookingCompletedPage/BookingCompletedPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/userpages/shared/UsersNavBar/UsersNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/shared/UsersNavBar/UsersNavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/userpages/shared/UsersNavBar/UsersNavBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/userpages/shared/UsersNavBar/UsersNavBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/components/Buttons/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/Buttons/buttons.scss" afterDir="false" />
+>>>>>>> feature/loggeg
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,8 +121,8 @@
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600871599776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600815770145" />
-    <state x="2444" y="193" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600779071277" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600871599776" />
+    <state x="2444" y="193" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600865126724" />
     <state width="1366" height="182" key="GridCell.Tab.0.bottom" timestamp="1600867484948">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -139,8 +139,6 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1366" height="182" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1280.1024@0.0.1366.768" timestamp="1600867484948" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600871599776" />
-    <state x="2444" y="193" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600865126724" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600674668263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -149,10 +147,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600692978842" />
-    <state x="546" y="139" width="826" height="763" key="find.popup" timestamp="1600816154027">
+    <state x="546" y="139" width="826" height="763" key="find.popup" timestamp="1601150007606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="546" y="139" width="826" height="763" key="find.popup/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1600816154027" />
+    <state x="546" y="139" width="826" height="763" key="find.popup/0.0.1920.1040/1920.0.1360.728@0.0.1920.1040" timestamp="1601150007606" />
     <state x="2307" y="97" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1360.728@1920.0.1360.728" timestamp="1600802211440" />
     <state x="2263" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600799833549">
       <screen x="1920" y="0" width="1360" height="728" />
