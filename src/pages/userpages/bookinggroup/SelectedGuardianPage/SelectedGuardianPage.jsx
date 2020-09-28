@@ -45,16 +45,12 @@ export default function SelectedGuardianPage() {
 
 //     const lat = geoLocation[0];
 //     const lng = geoLocation[1];
-
 //     let myLatLng = {lat: lat, lng: lng};
 //     const map = new google.maps.Map(document.getElementById("map"), {
 //         center: myLatLng,
 //         zoom: 13,
 //         mapTypeId: "roadmap",
 //     });
-
-    
-
 
     // let marker = new google.maps.Marker({
     //     position: new google.maps.LatLng(myLatLng),
