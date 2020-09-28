@@ -9,6 +9,9 @@ import BookingCompletedPage from "./pages/userpages/bookinggroup/BookingComplete
 import AvailableGuardianListPage from "./pages/userpages/AvailableGuardianListPage/AvailableGuardianListPage";
 import ProfilePage from "./pages/userpages/ProfilePage/ProfilePage";
 import PrivateRoute from "./shared/components/PrivateRoute/PrivateRoute"
+import FirstWelcomePage from "./pages/sharedpages/FirstWelcomePage/FirstWelcomePage";
+import SecondWelcomePage from "./pages/sharedpages/SecondWelcomePage/SecondWelcomePage";
+import {BookingDetail} from "./pages/userpages/bookinggroup/PreBookingDetailPage/components/BookingDetail/BookingDetail";
 
 function Routes() {
 
@@ -23,7 +26,10 @@ function Routes() {
                 <PrivateRoute path='/guardiansearch'><AvailableGuardianListPage/></PrivateRoute>
                 <PrivateRoute path='/selectedguardian/:id'><SelectedGuardianPage/></PrivateRoute>
                 <PrivateRoute path='/completedbooking'><BookingCompletedPage/></PrivateRoute>
+                <PrivateRoute path='/BookingDetail'><BookingDetail/></PrivateRoute>            
                 <PrivateRoute path='/profile'><ProfilePage  isLogged={isLogged} setIsLogged={setIsLogged}/></PrivateRoute>
+                <Route path='/firstpage'><FirstWelcomePage/></Route>
+                <Route path='/secondpage'><SecondWelcomePage/></Route>
                 <Route path='/'><HomePage/></Route>
             </Switch>
         </Router>
