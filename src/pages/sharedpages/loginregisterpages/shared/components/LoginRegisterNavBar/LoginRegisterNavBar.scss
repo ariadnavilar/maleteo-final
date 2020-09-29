@@ -13,5 +13,6 @@
 
 .underline {
   text-decoration: underline orange;
-  border-bottom: solid 2px orange;
+  text-underline-offset: 20%;
+  background-color: orange;
 }

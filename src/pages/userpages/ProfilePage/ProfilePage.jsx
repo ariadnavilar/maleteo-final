@@ -20,6 +20,12 @@ export default function ProfilePage(props) {
         history.push('/login');
     }
 
+    const guardianRegister = () =>
+        history.push('/guardianregister');
+
+    const editProfile = () =>
+        history.push('/profile/edit');
+
     useEffect(() => {
         API.get('bookings/' + email).then(res =>
         setBookings(res.data)
@@ -28,7 +34,9 @@ export default function ProfilePage(props) {
     return (
         <div className="margintop">
             <h1>¡Hola {user.name}!</h1>
-            <button className="whitebtn sm" onClick={()=>setModalIsOpen(true)}><span className="pi pi-calendar"></span> Reservas</button>
+            <div>
+                <button className="whitebtn sm" onClick={()=>setModalIsOpen(true)}><span className="pi pi-calendar orangeicons"></span> Tus reservas</button>
+            </div>
             <Modal isOpen={modalIsOpen}>
                 <div className="closewindow">
                     <button className="closebtn" onClick={()=>setModalIsOpen(false)}><span className="pi pi-times completed"></span></button>
@@ -46,6 +54,12 @@ export default function ProfilePage(props) {
                         )}
                 </div>}
             </Modal>
+            <div>
+                <button className="whitebtn sm" onClick={guardianRegister}><span className="pi pi-star-o orangeicons"></span> Registrarse como guardián</button>
+            </div>
+            <div>
+                <button className="whitebtn sm" onClick={editProfile}><span className="pi pi-user-edit orangeicons"></span> Editar perfil</button>
+            </div>
             <div className="centered">
                 <button className="orangebtn endbtn" onClick={signOut}>Cerrar sesión</button>
             </div>
