@@ -26,7 +26,7 @@ function Routes() {
                 <PrivateRoute path='/findguardian'><FindYourGuardianPage/></PrivateRoute>
                 <PrivateRoute path='/guardiansearch'><AvailableGuardianListPage/></PrivateRoute>
                 <PrivateRoute path='/selectedguardian/:id'><SelectedGuardianPage/></PrivateRoute>
-                <PrivateRoute path='/bookings/:id'><BookingDoneDetailPage/></PrivateRoute>
+                <PrivateRoute path='/BookingDoneDetailPage/:id'><BookingDoneDetailPage/></PrivateRoute>
                 <PrivateRoute path='/completedbooking'><BookingCompletedPage/></PrivateRoute>
                 <PrivateRoute path='/prebooking'><PreBookingDetailPage/></PrivateRoute>
                 <PrivateRoute path='/profile'><ProfilePage  isLogged={isLogged} setIsLogged={setIsLogged}/></PrivateRoute>

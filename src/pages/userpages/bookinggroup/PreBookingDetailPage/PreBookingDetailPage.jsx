@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {UsersNavBar} from "../../shared/UsersNavBar/UsersNavBar";
-import { API } from '../../../../shared/services/api';
+import {API} from '../../../../shared/services/api';
 
 
 export default function PreBookingDetailPage() {
@@ -23,7 +23,12 @@ export default function PreBookingDetailPage() {
         "guardian": guardian.id
     });
 
-    const saveDates =() => {
+    const maletas = Number(luggage)
+    let precio = maletas * 6;
+    let preciototal = precio + 2;
+
+
+    const saveDates = () => {
         API.post("bookings/register", data).then(res => {
             console.log('Reserva completada');
         })
@@ -31,7 +36,6 @@ export default function PreBookingDetailPage() {
 
     return (
         <div>
-
             <button className="containerarrow">
                 <a href="javascript:history.back()"><span className="pi pi-chevron-left gobackbtn"></span></a>
             </button>
@@ -54,72 +58,49 @@ export default function PreBookingDetailPage() {
                     </div>
                 </div>
                 <br/>
-
                 <div className="contenidoreserva">
                     <div className="container-fluid">
-
-
-
-
-
-                            <div className="row">
-                                <div className="col-6">
-                                    <p>Primeras 24 horas 6,00 x 2 equipajes</p>
-                                </div>
-                                <div className="col-6">
-                                    <p>10€</p>
-                                </div>
+                        <div className="row">
+                            <div className="col-6">
+                                <p>Primeras 24 horas 6,00 x 2 equipajes</p>
                             </div>
-
-
-
-
-                            <div className="row">
-                                <div className="col-6">
-                                    <p>Gastos de gestión</p>
-                                </div>
-                                <div className="col-6">
-                                    <p>2 €</p>
-                                </div>
+                            <div className="col-6">
+                                <p>{precio}€</p>
                             </div>
-
-
-                            <div className="row">
-                                <div className="col-6">
-                                    <p>Servicio asegurado hasta 1000€</p>
-                                </div>
-                                <div className="col-6">
-                                    <p>Gratis</p>
-                                </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-6">
+                                <p>Gastos de gestión</p>
                             </div>
-
-
-                            <div className="row">
-                                <div className="col-6">
-                                    <p>Total</p>
-                                </div>
-                                <div className="col-6">
-                                    <p>12€</p>
-                                </div>
+                            <div className="col-6">
+                                <p>2 €</p>
                             </div>
-
-
+                        </div>
+                        <div className="row">
+                            <div className="col-6">
+                                <p>Servicio asegurado hasta 1000€</p>
+                            </div>
+                            <div className="col-6">
+                                <p>Gratis</p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-6">
+                                <p>Total</p>
+                            </div>
+                            <div className="col-6">
+                                <p>{preciototal}€</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
             <div className="centered">
                 <Link to="/completedbooking">
                     <button className="orangebtn" onClick={saveDates}>Reservar</button>
                 </Link>
             </div>
-
-
             <UsersNavBar/>
-
         </div>
-
-
     );
 }

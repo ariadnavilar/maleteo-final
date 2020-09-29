@@ -1,0 +1,51 @@
+.map {
+  height: 400px;
+}
+
+.fotodelacasa {
+  display: flex;
+  justify-content: center;
+  height: 125pt;
+  width: auto;
+}
+
+.fotoguardian {
+  height: 64pt;
+  width: auto;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.reseña1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 150px;
+}
+
+
+.estrellas{
+  display: flex;
+  .pi{
+    &.pi-star{
+      display: flex;
+      color: yellow;
+    }
+  }
+}
+
+.menurojo {
+  display: flex;
+  align-items: center;
+  color: red;
+  font-Size: 8pt;
+  .pi {
+    &.pi-briefcase {
+      align-items: center;
+      font-Size: 9pt;
+      color: #ff8200;
+      width: 8pt;
+    }
+  }
+}
+
+
