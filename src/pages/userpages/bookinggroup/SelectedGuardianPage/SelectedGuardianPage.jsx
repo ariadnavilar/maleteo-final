@@ -13,14 +13,14 @@ export default function SelectedGuardianPage() {
 
     useEffect(() => {
 
-        API.get('users/guardianes/' + id).then(res =>{
+        API.get('users/guardianes/' + id).then(res => {
             setGuardian(res.data);
             pintarMapa(res.data);
 
-            })
+        })
     }, []);
 
-    function pintarMapa(guardian){
+    function pintarMapa(guardian) {
         const lat = guardian.geoLocation[0]
         const lng = guardian.geoLocation[1];
         let myLatLng = {lat: lat, lng: lng};
@@ -37,7 +37,7 @@ export default function SelectedGuardianPage() {
         });
     }
 
-    const saveGuardian = () =>{
+    const saveGuardian = () => {
         let dataGuardian = {
             "id": guardian._id,
             "name": guardian.name
@@ -52,18 +52,19 @@ export default function SelectedGuardianPage() {
             </div>
         )
     }
-  
+
 
     return (
         <div>
             <div>
                 <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
             </div>
+            <br/>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-8">
-                        <h4>El Hall de {guardian.name}</h4>
-                        <h6>{guardian.location}</h6>
+                        <h5>El Hall de {guardian.name}</h5>
+                        <p>{guardian.location}</p>
                     </div>
                     <div className="col-4">
                         <img className="fotoguardian" src={guardian.personalImage}/>
@@ -106,9 +107,7 @@ export default function SelectedGuardianPage() {
                             alojar tus maletas y cuidar de ellas.</p>
                     </div>
                 </div>
-
-                <p></p>
-
+                <br/>
                 <div className="row">
                     <div className="col-2">
                         <i className="pi pi-users" style={{'fontSize': '2em', 'color': '#FF9B33'}}></i>
@@ -119,9 +118,7 @@ export default function SelectedGuardianPage() {
                             espacio como muy limpio.</p>
                     </div>
                 </div>
-
-                <p></p>
-
+                <br/>
                 <div className="row">
                     <div className="col-2">
                         <i className="pi pi-chart-line" style={{'fontSize': '2em', 'color': '#FF9B33'}}></i>
@@ -132,21 +129,18 @@ export default function SelectedGuardianPage() {
                             experiéncia como muy segura.</p>
                     </div>
                 </div>
-
-                <p></p>
+                <br/>
             </div>
             <div>
-
-                {/*Espacion para pintar el mapa*/
-                }
+                <h5>Ubicación</h5>
+                {/*Espacion para pintar el mapa*/}
                 <div>
                     <div id="map" className="map"></div>
                 </div>
                 {/*espacio de reseñas he puestos los nombres inventados, Aleatorios*/}
-                <p></p>
+                <br/>
                 <h5>Reseñas</h5>
-                <p></p>
-
+                <br/>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-2">
@@ -161,7 +155,7 @@ export default function SelectedGuardianPage() {
                                 muchísima seguridad.</p>
                         </div>
                     </div>
-                    <p></p>
+                    <br/>
                     <div className="row">
                         <div className="col-2">
                             <img className="reseña1"
@@ -174,7 +168,7 @@ export default function SelectedGuardianPage() {
                                 showed us the best places to go for tapas in Madrid. Thank you so much.</p>
                         </div>
                     </div>
-                    <p></p>
+                    <br/>
                     <div className="row">
                         <div className="col-2">
                             <img className="reseña1"
@@ -189,30 +183,20 @@ export default function SelectedGuardianPage() {
                                 genial.</p>
                         </div>
                     </div>
-                    <p></p>
+                    <br/>
                 </div>
-
                 <h5>Normas de {guardian.name}</h5>
-
-
                 <p>Cómo debe ser tu maleta</p>
-
                 <p>Tipo de cancelación de reserva</p>
-
                 <p>Contactar con tu guardián</p>
-
                 <p>Denunciar anuncio</p>
-
                 <p>Otros lockers cerca de ti</p>
-
                 <div className="centered">
                     <Link to="/prebooking">
                         <button className="orangebtn" onClick={saveGuardian}>Reservar Ahora</button>
                     </Link>
                 </div>
-
             </div>
-
         </div>
     )
 }

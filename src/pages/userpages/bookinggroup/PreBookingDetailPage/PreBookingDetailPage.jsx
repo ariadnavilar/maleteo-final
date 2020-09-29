@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {UsersNavBar} from "../../shared/UsersNavBar/UsersNavBar";
 import { API } from '../../../../shared/services/api';
 
+
 export default function PreBookingDetailPage() {
 
     const fechasdereserva = localStorage.datasearch;
@@ -30,8 +31,9 @@ export default function PreBookingDetailPage() {
 
     return (
         <div>
+
             <button className="containerarrow">
-                <Link to="/guardiansearch"><span className="pi pi-chevron-left gobackbtn"></span></Link>
+                <a href="javascript:history.back()"><span className="pi pi-chevron-left gobackbtn"></span></a>
             </button>
             <p style={{'fontSize': '15pt'}}>Detalles de tu reserva</p>
             <div className="reservas">
@@ -39,7 +41,7 @@ export default function PreBookingDetailPage() {
                     <div className="row">
                         <div className="col-4">
                             <h5>Llegada</h5>
-                            <p>{deposit}</p>
+                            <p style={{'font-size': '14px'}}>{deposit}</p>
                         </div>
                         <div className="col-4">
                             <h5>Recogida</h5>
