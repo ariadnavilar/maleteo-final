@@ -57,7 +57,7 @@ export default function Location(props) {
             let marker = new google.maps.Marker({
                 position: new google.maps.LatLng(lat, lng),
                 title: guardian.name,
-                icon: iconBase + 'orange-stars_maps.png',
+                icon: iconBase + 'orange-stars_maps.png', 
             });
             marker.setMap(map);
 
