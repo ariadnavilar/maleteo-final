@@ -1,11 +1,10 @@
-.pi {
-    &.completed {
+completed {
     color: black;
     font-weight: bold;
     font-size: 20px;
     display:flex;
     flex-direction: row-reverse;
-}}
+}
 
 .logofenix{
     height: 150px;

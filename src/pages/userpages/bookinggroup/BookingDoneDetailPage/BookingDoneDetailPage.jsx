@@ -3,28 +3,24 @@ import {Link, useParams} from "react-router-dom";
 import {API} from "../../../../shared/services/api";
 import {Carousel} from "primereact/carousel";
 import "./BookingDoneDetailPage.scss";
-import Modal from "react-modal";
-import ProfilePage from "../../ProfilePage/ProfilePage";
+import {UsersNavBar} from "../../shared/UsersNavBar/UsersNavBar";
 
 export default function BookingDoneDetailPage() {
 
     const id = useParams().id;
     const google = window.google;
-    const [guardian, setGuardian] = useState([]);
-    const [geoLocation, setLocation] = useState([]);
-    const [bookings, setBookings] = useState([]);
-
+    const [booking, setBooking] = useState(null);
+    const guardian = booking ? booking.guardian : null
 
     useEffect(() => {
+        API.get('bookings/booking/' + id).then(res => {
+            setBooking(res.data);
 
-
-        API.get('users/guardianes/' + id).then(res => {
-            setGuardian(res.data);
-            pintarMapa(res.data);
-
+pintarMapa(res.data.guardian)
         })
     }, []);
 
+    console.log(booking);
 
     function pintarMapa(guardian) {
         const lat = guardian.geoLocation[0]
@@ -43,13 +39,6 @@ export default function BookingDoneDetailPage() {
         });
     }
 
-    const saveGuardian = () => {
-        let dataGuardian = {
-            "id": guardian._id,
-            "name": guardian.name
-        }
-        localStorage.setItem("dataGuardian", JSON.stringify(dataGuardian));
-    }
 
     const itemTemplate = (image) => {
         return (
@@ -58,6 +47,11 @@ export default function BookingDoneDetailPage() {
             </div>
         )
     }
+
+    if (!guardian) {
+        return <p>loading</p>
+    }
+
 
 
     return (
@@ -84,22 +78,21 @@ export default function BookingDoneDetailPage() {
                 <div>
                     <div id="map" className="map"></div>
                 </div>
-                {/*espacio de reseñas he puestos los nombres inventados, Aleatorios*/}
                 <br/>
                 <div className="reservas">
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-4">
                                 <h5>Llegada</h5>
-                                <p>"deposit"</p>
+                                <p>{new Date(booking.initialDate).toLocaleDateString()}</p>
                             </div>
                             <div className="col-4">
                                 <h5>Recogida</h5>
-                                <p>"withdrawal"</p>
+                                <p>{new Date(booking.finalDate).toLocaleDateString()}</p>
                             </div>
                             <div className="col-4">
                                 <h5>Equipaje</h5>
-                                <p>"luggage"</p>
+                                <p>{booking.nSuitcases} Equipajes</p>
                             </div>
                         </div>
                     </div>
@@ -109,10 +102,10 @@ export default function BookingDoneDetailPage() {
                 <h5>Cómo debe ser tu maleta</h5>
                 <div className="separator"></div>
                 <h5>Codigo de reserva</h5>
-                <p># de reserva</p>
+                <p>{booking._id}</p>
                 <div className="separator"></div>
                 <h5>Coste total</h5>
-                <p>12€</p>
+                <p>{booking.price} €</p>
                 <hp>Desglose</hp>
                 <div className="separator"></div>
                 <h5>¿Necesitas Ayuda?</h5>
@@ -120,6 +113,8 @@ export default function BookingDoneDetailPage() {
                 <div className="separator"></div>
                 <br/>
             </div>
+
+            <UsersNavBar/>
         </div>
     )
 }

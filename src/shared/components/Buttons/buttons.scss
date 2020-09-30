@@ -41,18 +41,20 @@
   box-shadow: none;
   cursor: pointer;
   &.sm {
-    width: 45%;
-    height: 45px;
+    width: auto;
+    height: 0px;
     margin-left: 3px;
     margin-top: 20px;
+    padding: 0px;
     border-radius: 10px;
+    border: none;
   }
 }
 
-.whitebtn:hover {
+/*.whitebtn:hover {
   background-color: #FCE3C6;
   border-radius: 10px;
-}
+}*/
 
 .margin {
   margin: 30px;

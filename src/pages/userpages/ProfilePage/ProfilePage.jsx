@@ -19,12 +19,19 @@ export default function ProfilePage(props) {
         props.setIsLogged(false);
         history.push('/login');
     }
+
+    const guardianRegister = () =>
+        history.push('/guardianregister');
+
+    const editProfile = () =>
+        history.push('/profile/edit');
+
+
     useEffect(() => {
         API.get('bookings/' + email).then(res =>
             setBookings(res.data)
         )
     }, [])
-    console.log(bookings);
     console.log(bookings);
     return (
         <div className="margintop">
@@ -33,6 +40,12 @@ export default function ProfilePage(props) {
             <button className="whitebtn sm" onClick={() => setModalIsOpen(true)}><span
                 className="pi pi-calendar"></span> Reservas
             </button>
+
+            <div>
+                <button className="whitebtn sm" onClick={() => setModalIsOpen(true)}><span
+                    className="pi pi-calendar orangeicons"></span> Tus reservas
+                </button>
+            </div>
             <Modal isOpen={modalIsOpen}>
                 <div className="closewindow">
                     <button className="closebtn" onClick={() => setModalIsOpen(false)}><span
@@ -45,11 +58,21 @@ export default function ProfilePage(props) {
                             <h5>Reserva nº{1 + i++}</h5>
                             <p>{booking.initialDate}</p>
                             <p>{booking.finalDate}</p>
-                            <Link to={"/BookingDoneDetailPage/" + booking.guardian._id}>Detalles de la reserva</Link>
+                            <Link to={"/bookings/:id" + booking._id}>Detalles de la reserva</Link>
                         </div>
                     )}
                 </div>}
             </Modal>
+            <div>
+                <button className="whitebtn sm" onClick={guardianRegister}><span
+                    className="pi pi-star-o orangeicons"></span> Registrarse como guardián
+                </button>
+            </div>
+            <div>
+                <button className="whitebtn sm" onClick={editProfile}><span
+                    className="pi pi-user-edit orangeicons"></span> Editar perfil
+                </button>
+            </div>
             <div className="centered">
                 <button className="orangebtn endbtn" onClick={signOut}>Cerrar sesión</button>
             </div>

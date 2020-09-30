@@ -48,7 +48,7 @@ export default function SelectedGuardianPage() {
     const itemTemplate = (image) => {
         return (
             <div className="fotodelacasa">
-                <img src={image}></img>
+                <img src={image} className="imgCarousel"></img>
             </div>
         )
     }

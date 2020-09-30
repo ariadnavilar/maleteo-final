@@ -20,7 +20,6 @@ export default function Form() {
     useEffect(() => {
         const input = document.getElementById("location");
         const searchBox = new google.maps.places.SearchBox(input);
-    
 
     searchBox.addListener("places_changed", () => {
         const places = searchBox.getPlaces();
@@ -32,6 +31,7 @@ export default function Form() {
         history.push("/guardiansearch/");
         
     }
+
     return (
         <div>
 
