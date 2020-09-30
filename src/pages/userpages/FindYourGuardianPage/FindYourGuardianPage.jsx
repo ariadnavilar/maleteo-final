@@ -14,8 +14,6 @@ export default function FindYourGuardianPage() {
             <Experiences/>
             <UsersNavBar/>
         </div>
-
-        
     )
 }
             
