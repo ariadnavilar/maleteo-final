@@ -13,11 +13,7 @@ import "./Location.scss"
 export default function Location(props) {
 
     const google = window.google;
-
-
     const guardians = props.guardians;
-
-   
 
     useEffect(() => {
         const geo = JSON.parse(localStorage.getItem("dataLocation"));

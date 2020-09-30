@@ -15,12 +15,9 @@ export default function BookingDoneDetailPage() {
     useEffect(() => {
         API.get('bookings/booking/' + id).then(res => {
             setBooking(res.data);
-
-pintarMapa(res.data.guardian)
+            pintarMapa(res.data.guardian)
         })
     }, []);
-
-    console.log(booking);
 
     function pintarMapa(guardian) {
         const lat = guardian.geoLocation[0]
@@ -43,13 +40,13 @@ pintarMapa(res.data.guardian)
     const itemTemplate = (image) => {
         return (
             <div className="fotodelacasa">
-                <img src={image}></img>
+                <img src={image} className="imgCarousel"></img>
             </div>
         )
     }
 
     if (!guardian) {
-        return <p>loading</p>
+        return (<div></div>)
     }
 
 
@@ -105,7 +102,7 @@ pintarMapa(res.data.guardian)
                 <p>{booking._id}</p>
                 <div className="separator"></div>
                 <h5>Coste total</h5>
-                <p>{booking.price} €</p>
+                <p>{booking.price * booking.nSuitcases} €</p>
                 <hp>Desglose</hp>
                 <div className="separator"></div>
                 <h5>¿Necesitas Ayuda?</h5>
