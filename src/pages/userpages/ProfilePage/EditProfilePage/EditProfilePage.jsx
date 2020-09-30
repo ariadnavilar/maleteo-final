@@ -26,17 +26,7 @@ export default function EditProfilePage() {
         API.put('users/update/' + id, formData).then(res => {
             console.log('Datos actualizados');
         })
-        /*const data = {
-            name: formData.name,
-            surname: formData.surname,
-            email: user.email,
-            birthdate: (formData.birthdate ? formData.birthdate : user.birthdate),
-            id: user.id,
-            logged: user.logged
-        }
-
-        localStorage.setItem('user', JSON.stringify(data));
-        setModalIsOpen(false);*/
+      
     }
 
     return (
@@ -55,7 +45,7 @@ export default function EditProfilePage() {
             <p>
                 <span className="pi pi-calendar smicons">
                 </span>
-                {user.birthdate}
+                {new Date(user.birthdate).toLocaleDateString()}
             </p>
 
             <div className="centered">

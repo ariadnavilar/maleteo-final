@@ -46,8 +46,8 @@ export default function ProfilePage(props) {
                     {bookings.map((booking, i) =>
                         <div>
                             <h5>Reserva nº{1+i++}</h5>
-                            <p>{booking.initialDate}</p>
-                            <p>{booking.finalDate}</p>
+                            <p>{new Date(booking.initialDate).toLocaleDateString()}</p>
+                            <p>{new Date(booking.finalDate).toLocaleDateString()}</p>
                             <p>Tu guardián es {booking.guardian.name}</p>
                             <Link to={"/bookings/" + booking._id}>Detalles de la reserva</Link>
                         </div>
