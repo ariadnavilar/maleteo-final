@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {Link, useHistory} from "react-router-dom";
 import "./EditProfilePage.scss";
 import {API} from "../../../../shared/services/api";
@@ -12,18 +12,31 @@ export default function EditProfilePage() {
     const history = useHistory();
     let user = JSON.parse(localStorage.getItem('user'));
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const formularioDOM = useRef(null);
 
     let id = user.id;
 
     const backToProfile = () =>
         history.push("/profile");
 
-    const onSubmit = formData => {
+    const onSubmit = event => {
+        const formmanoli = document.getElementById('formmanoli');
+        const formData = new FormData(formmanoli)
+        event.preventDefault();
         API.put('users/update/' + id, formData).then(res => {
             console.log('Datos actualizados');
-
         })
-        setModalIsOpen(false);
+        /*const data = {
+            name: formData.name,
+            surname: formData.surname,
+            email: user.email,
+            birthdate: (formData.birthdate ? formData.birthdate : user.birthdate),
+            id: user.id,
+            logged: user.logged
+        }
+
+        localStorage.setItem('user', JSON.stringify(data));
+        setModalIsOpen(false);*/
     }
 
     return (
@@ -60,19 +73,21 @@ export default function EditProfilePage() {
 
                 <h4>Modifica tus datos</h4>
 
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form encType="multipart/form-data" onSubmit={onSubmit} id="formmanoli">
+
+                    <input type="file" name="avatar"/>
 
                     <label htmlFor="name">Nombre</label>
-                    <input type="text" name="name" placeholder={user.name} defaultValue={user.name} ref={register}/>
+                    <input type="text" name="name" placeholder={user.name} defaultValue={user.name}/>
 
                     <label htmlFor="surname">Apellidos</label>
-                    <input type="text" name="surname" placeholder={user.surname} defaultValue={user.surname} ref={register}/>
+                    <input type="text" name="surname" placeholder={user.surname} defaultValue={user.surname}/>
 
                     <label htmlFor="birthdate">Fecha de nacimiento</label>
-                    <input type="date" name="birthdate" placeholder={user.birthdate} defaultValue={user.birthdate} ref={register}/>
+                    <input type="date" name="birthdate" placeholder={user.birthdate} defaultValue={user.birthdate}/>
 
                     <div className="centered">
-                        <input className="whitebtn modalbtn" type="submit" value="Guardar cambios"/>
+                        <button className="whitebtn modalbtn" type="submit" value="Guardar cambios">enviar</button>
                     </div>
 
                 </form>

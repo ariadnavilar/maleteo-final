@@ -49,7 +49,7 @@ export default function RegisterViewPage(){
 
                 <label htmlFor="password">Contraseña</label>
                 <input type="password" name="password" placeholder="*********" ref={register ({required:true, pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/ })}/>
-                {errors.password && <span className="warning">Tu contraseña debe contener al menos 8 caracteres</span>}
+                {errors.password && <span className="warning">Tu contraseña debe contener al menos 8 caracteres, una minúscula y una mayúscula</span>}
 
                 <div className="centered">
                     <input className="orangebtn" type="submit" value="Registrarse"/>

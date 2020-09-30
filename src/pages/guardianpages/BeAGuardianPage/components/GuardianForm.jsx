@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import { useForm } from "react-hook-form";
 import { API } from "../../../../shared/services/api";
 import { useHistory } from "react-router-dom";
@@ -10,6 +10,7 @@ export default function GuardianForm() {
     const history = useHistory();
     const user = JSON.parse(localStorage.getItem('user'));
     const google = window.google;
+    const formDOM = useRef(null);
 
     const id = user.id;
 
@@ -19,16 +20,18 @@ export default function GuardianForm() {
 
         searchBox.addListener("places_changed", () => {
             const places = searchBox.getPlaces();
-            localStorage.setItem("dataLocation", JSON.stringify(places[0].geometry));
+            localStorage.setItem("dataGuardian", JSON.stringify(places[0].geometry));
         })
     }, [])
 
-    /*
-    FALTA ACABAR PARA PASAR DATALOCATION DEL LOCAL STORAGE A LA BBDD
-    const geoLocation = localStorage.dataLocation.location;*/
 
-    const onSubmit = formData => {
-        API.put('/changeGuardian/' + id, formData).then(res => {
+    const onSubmit = event => {
+        event.preventDefault();
+        const dataGuardian = JSON.parse(localStorage.getItem('dataGuardian'));
+        const formData = new FormData(formDOM.current);
+        formData.append('geoLocation[]', dataGuardian.location.lat);
+        formData.append('geoLocation[]', dataGuardian.location.lng);
+        API.put('users/changeGuardian/' + id, formData).then(res => {
             console.log('Guardián registrado');
         })
     }
@@ -36,7 +39,9 @@ export default function GuardianForm() {
     return (
         <div className="margintop">
             <h5>¿Dónde está tu espacio?</h5>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={onSubmit} ref={formDOM}>
+
+                <input type="file" name="images" multiple/>
 
                 <label htmlFor="location">Ubicación</label>
                 <input type="text" name="location" id="location" placeholder="Ej. Calle Alcalá, 58 (Madrid, España)" ref={register ({required:true})}/>
