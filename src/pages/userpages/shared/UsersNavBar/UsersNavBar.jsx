@@ -11,7 +11,7 @@ export function UsersNavBar() {
                 <NavLink exact to="/findguardian" activeClassName="orangeicon" className="navicons">
                     <span className="pi pi-home icons"></span>
                 </NavLink>
-                <NavLink exact to="guardiansearch" activeClassName="orangeicon" className="navicons">
+                <NavLink exact to="/findguardian" activeClassName="orangeicon" className="navicons">
                     <span className="pi pi-search icons"></span>
                 </NavLink>
                 <NavLink exact to="/messages" activeClassName="orangeicon" className="navicons">

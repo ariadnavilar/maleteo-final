@@ -49,7 +49,7 @@ export default function ProfilePage(props) {
                             <p>{booking.initialDate}</p>
                             <p>{booking.finalDate}</p>
                             <p>Tu guardián es {booking.guardian.name}</p>
-                            <Link to="/reserva/:id">Detalles de la reserva</Link>
+                            <Link to="/bookings/:id">Detalles de la reserva</Link>
                         </div>
                         )}
                 </div>}
