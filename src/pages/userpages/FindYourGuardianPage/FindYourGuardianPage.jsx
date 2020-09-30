@@ -3,7 +3,7 @@ import "./FindYourGuardianPage.scss"
 import News from "./components/News/News";
 import Experiences from "./components/Experiences/Experiences";
 import Form from "./components/Form/Form";
-import {UsersNavBar} from "../shared/UsersNavBar/UsersNavBar";
+import {UsersNavBar} from "../shared/UsersNavBar/UsersNavBar"
 
 export default function FindYourGuardianPage() {
     return (
@@ -14,5 +14,9 @@ export default function FindYourGuardianPage() {
             <Experiences/>
             <UsersNavBar/>
         </div>
+
+        
     )
 }
+            
+

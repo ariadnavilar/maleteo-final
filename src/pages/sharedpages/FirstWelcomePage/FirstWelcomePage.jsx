@@ -22,7 +22,7 @@ export default function FirstWelcomePage() {
                     </div>
                     <div className="centered">
                         <Link className="linkeo" to="secondpage">
-                            <input className="orangebtn" type="submit" value="Registrarse" />
+                            <input className="orangebtn" type="submit" value="Continuar" />
                         </Link>
 
                     </div>
