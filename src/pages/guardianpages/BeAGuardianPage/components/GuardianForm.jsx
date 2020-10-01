@@ -30,8 +30,8 @@ export default function GuardianForm() {
         event.preventDefault();
         const dataGuardian = JSON.parse(localStorage.getItem('dataGuardian'));
         const formData = new FormData(formDOM.current);
-        formData.append('geoLocation[]', dataGuardian.location.lat);
-        formData.append('geoLocation[]', dataGuardian.location.lng);
+        formData.append('geoLocation[]', parseFloat(dataGuardian.location.lat));
+        formData.append('geoLocation[]', parseFloat(dataGuardian.location.lng));
         API.put('users/changeGuardian/' + id, formData).then(res => {
             console.log('Guardián registrado');
         })

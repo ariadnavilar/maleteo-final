@@ -42,9 +42,9 @@ export default function Form() {
                            placeholder="¿Dónde te encuentras? Madrid, Barcelona..." ref={register({required: true})}/>
                 </div>
                 <div className="row centered">
-                    <input className="datesearch calendar" type="date" name="deposit" placeholder="Depósito"
+                    <input className="datesearch calendar" type="date" name="deposit" placeholder="Depósito" min="2020-10-02" max="2022-10-02"
                            ref={register({required: true})}/>
-                    <input className="datesearch calendar" type="date" name="withdrawal" placeholder="Retirada"
+                    <input className="datesearch calendar" type="date" name="withdrawal" placeholder="Retirada" min="2020-10-03" max="2022-10-02"
                            ref={register({required: true})}/>
                 </div>
                 <div className="row centered">

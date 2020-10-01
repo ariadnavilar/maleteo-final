@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useCallback} from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,6 +14,7 @@ export default function Location(props) {
 
     const google = window.google;
     const guardians = props.guardians;
+    const setActiveGuardian = props.setActiveGuardian;
 
     useEffect(() => {
         const geo = JSON.parse(localStorage.getItem("dataLocation"));
@@ -35,8 +36,8 @@ export default function Location(props) {
             title: 'Prueba',
         });
 
-        for (const guardian of guardians) {
-
+        for (let i = 0; i < guardians.length ; i++) {
+            let guardian = guardians[i];
             const lat = guardian.geoLocation[0];
             const lng = guardian.geoLocation[1];
 
@@ -57,10 +58,13 @@ export default function Location(props) {
             let marker = new google.maps.Marker({
                 position: new google.maps.LatLng(lat, lng),
                 title: guardian.name,
-                icon: iconBase + 'orange-stars_maps.png'
+                icon: iconBase + 'orange-stars_maps.png' 
             });
             marker.setMap(map);
-
+            
+            marker.addListener("click", () => {
+                setActiveGuardian(i);
+              });
         }
 
 /*        INTENTO AÑADIR FUNCIÓN PARA CLICKAR EN MARKER Y Q ME HAGA ZOOM, no me sale :'D
