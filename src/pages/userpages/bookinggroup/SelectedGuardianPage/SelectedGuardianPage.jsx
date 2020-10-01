@@ -65,7 +65,7 @@ export default function SelectedGuardianPage() {
                     <h5>El Hall de {guardian.name}</h5>
                     <p>{guardian.location}</p>
                 </div>
-                <div className="">
+                <div>
                     <img className="fotoguardian" src={guardian.personalImage}/>
                 </div>
                 <div className="col-7">
@@ -161,7 +161,6 @@ export default function SelectedGuardianPage() {
                         </div>
                     </div>
                 </div>
-              
                 <div className="centered">
                     <Link to="/prebooking">
                         <button className="orangebtn booknowbtn" onClick={saveGuardian}>Reservar Ahora</button>
