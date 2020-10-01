@@ -7,7 +7,7 @@ export default function HomePage() {
     const history = useHistory();
 
     useEffect(() => {
-        let timer = setTimeout(() => history.push('./firstpage'),5000);
+        let timer = setTimeout(() => history.push('./firstpage'),1500);
         return () => {
             clearTimeout(timer);
         }
@@ -25,5 +25,4 @@ export default function HomePage() {
             </div>
             </div>
     )
-    
 }

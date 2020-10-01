@@ -39,7 +39,7 @@ export default function BookingDoneDetailPage() {
 
     const itemTemplate = (image) => {
         return (
-            <div className="fotodelacasa">
+            <div>
                 <img src={image} className="imgCarousel"></img>
             </div>
         )
@@ -49,28 +49,25 @@ export default function BookingDoneDetailPage() {
         return (<div></div>)
     }
     return (
-        <div>
+        <div className="marginbottom">
             <div>
                 <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
             </div>
-            <div className="container-fluid">
-                <div className="row">
+                <div className="row margintop">
                     <div className="col-8">
                         <h5>El Hall de {guardian.name}</h5>
                         <p>{guardian.location}</p>
                     </div>
-                    <img className="fotoguardian" src={guardian.personalImage}/>
+                    <div>
+                        <img className="fotoguardian" src={guardian.personalImage}/>
+                    </div>
                 </div>
-            </div>
-
             <div>
-                <h5>Ubicación</h5>
-                {/*Espacion para pintar el mapa*/}
-                <div>
+                <h5 className="margintop">Ubicación</h5>
+                <div className="mapcontainer">
                     <div id="map" className="map"></div>
                 </div>
-                <div className="reservas">
-                    <div className="container-fluid">
+                <div className="reservas margintop">
                         <div className="row">
                             <div className="col-4">
                                 <h5>Llegada</h5>
@@ -85,18 +82,17 @@ export default function BookingDoneDetailPage() {
                                 <p>{booking.nSuitcases} Equipajes</p>
                             </div>
                         </div>
-                    </div>
                 </div>
-                <h5>Normas de {guardian.name}</h5>
-                <h5>Cómo debe ser tu maleta</h5>
-                <h5>Codigo de reserva</h5>
-                <p>{booking._id}</p>
-                <h5>Coste total</h5>
-                <p>{booking.price * booking.nSuitcases} €</p>
-                <hp>Desglose</hp>
-                <h5>¿Necesitas Ayuda?</h5>
+                <div className="separatorbooking"></div>
+                <p>Codigo de reserva</p>
+                <p className="grey">{booking._id}</p>
+                <div className="separatorbooking thin"></div>
+                <p>Coste total</p>
+                <p className="grey">{booking.price * booking.nSuitcases} €</p>
+                <div className="separatorbooking thin"></div>
+                <p>¿Necesitas Ayuda?</p>
+                <a className="volver" href="/profile"><span className="pi pi-arrow-circle-left"></span>  Volver</a>
             </div>
-
             <UsersNavBar/>
         </div>
     )

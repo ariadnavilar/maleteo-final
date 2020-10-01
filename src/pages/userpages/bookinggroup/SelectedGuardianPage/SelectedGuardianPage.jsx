@@ -65,7 +65,7 @@ export default function SelectedGuardianPage() {
                     <h5>El Hall de {guardian.name}</h5>
                     <p>{guardian.location}</p>
                 </div>
-                <div className="">
+                <div>
                     <img className="fotoguardian" src={guardian.personalImage}/>
                 </div>
                 <div className="col-7">
@@ -161,12 +161,6 @@ export default function SelectedGuardianPage() {
                         </div>
                     </div>
                 </div>
-                <h5 className="margintop">Normas de {guardian.name}</h5>
-                <p>Cómo debe ser tu maleta</p>
-                <p>Tipo de cancelación de reserva</p>
-                <p>Contactar con tu guardián</p>
-                <p>Denunciar anuncio</p>
-                <p>Otros lockers cerca de ti</p>
                 <div className="centered">
                     <Link to="/prebooking">
                         <button className="orangebtn booknowbtn" onClick={saveGuardian}>Reservar Ahora</button>
