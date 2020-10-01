@@ -1,0 +1,26 @@
+.pi {
+    &.completedleft {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+    &.completedright {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.smicons {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.modalbtn {
+    width: 70%;
+}

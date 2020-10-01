@@ -1,0 +1,41 @@
+.imgCarousel{
+    max-width: 100%;
+}
+
+.p-carousel {
+    &.bigger {
+        height: 300px;
+    }
+}
+
+.fotoguardian {
+    height: 75px;
+    width: 50%;
+    align-items: center;
+    border-radius: 10px;
+    object-fit: cover;
+    position: absolute;
+    right: 25px;
+}
+
+.reseña1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 150px;
+}
+
+.pi-star {
+    color: gold;
+}
+
+.selectedguardianicons {
+    font-size: 2em;
+    color: rgb(246, 143, 36);
+}
+
+.booknowbtn {
+    margin-bottom: 80px;
+}
+
+
+

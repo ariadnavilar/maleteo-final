@@ -7,6 +7,9 @@ npm i react-router-dom --save
 npm i nodemon --save
 npm i express --save
 npm i mongoose --save
+npm i react-modal --save
+
+
 
 3. git branch NOMBRE_RAMA           // para crearla
 4. git checkout NOMBRE_RAMA         // para cambiar a la rama que se ha creado
@@ -22,12 +25,12 @@ git add .
 git commit -m "nota"
 git push origin NOMBRE_RAMA
 
-//Nos cambiamos a master:
+//Nos cambiamos a develop:
 
-git checkout master
-git pull origin master
+git checkout develop
+git pull origin develop
 git branch --merged
 git merge NOMBRE_RAMA
-git push origin master
+git push origin develop
 
 

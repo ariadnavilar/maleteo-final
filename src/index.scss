@@ -1,12 +1,25 @@
+@import "~bootstrap/scss/bootstrap";
+@import '~primeicons/primeicons.css';
+@import "~primereact/resources/primereact.min.css";
+
+
 body {
-  width: 375px;
-  height: 667px;
-  margin: 0;
+  margin-right: 30px;
+  margin-left: 30px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 28px;
+}
+
+label input p h3 {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 code {
