@@ -11,6 +11,7 @@ export default function BookingDoneDetailPage() {
     const google = window.google;
     const [booking, setBooking] = useState(null);
     const guardian = booking ? booking.guardian : null
+    const GastosDeGestion = 2;
 
     useEffect(() => {
         API.get('bookings/booking/' + id).then(res => {
@@ -88,7 +89,7 @@ export default function BookingDoneDetailPage() {
                 <p className="grey">{booking._id}</p>
                 <div className="separatorbooking thin"></div>
                 <p>Coste total</p>
-                <p className="grey">{booking.price * booking.nSuitcases} €</p>
+                <p className="grey">{booking.price * booking.nSuitcases + GastosDeGestion} €</p>
                 <div className="separatorbooking thin"></div>
                 <p>¿Necesitas Ayuda?</p>
                 <a className="volver" href="/profile"><span className="pi pi-arrow-circle-left"></span>  Volver</a>
