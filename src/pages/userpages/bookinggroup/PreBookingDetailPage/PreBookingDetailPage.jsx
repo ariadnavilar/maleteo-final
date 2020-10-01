@@ -45,11 +45,11 @@ export default function PreBookingDetailPage() {
                     <div className="row">
                         <div className="col-4">
                             <h5>Llegada</h5>
-                            <p style={{'font-size': '14px'}}>{deposit}</p>
+                            <p style={{'font-size': '14px'}}>{new Date(deposit).toLocaleDateString()}</p>
                         </div>
                         <div className="col-4">
                             <h5>Recogida</h5>
-                            <p style={{'font-size': '14px'}}>{withdrawal}</p>
+                            <p style={{'font-size': '14px'}}>{new Date(withdrawal).toLocaleDateString()}</p>
                         </div>
                         <div className="col-4">
                             <h5>Equipaje</h5>

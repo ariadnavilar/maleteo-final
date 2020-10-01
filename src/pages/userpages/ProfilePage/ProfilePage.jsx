@@ -12,6 +12,7 @@ export default function ProfilePage(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [secondModalIsOpen, setSecondModalIsOpen] = useState(false);
     const [bookings, setBookings] = useState([]);
+    const [selectedBookingId, setSelectedBookingId] = useState([]);
 
     const email = user.email;
 
@@ -22,6 +23,12 @@ export default function ProfilePage(props) {
         history.push('/login');
     }
 
+    const apiGet = () => {
+        
+        API.get('bookings/' + email).then(res => {
+            setBookings(res.data)
+            })
+    }
     const guardianRegister = () =>
         history.push('/guardianregister');
 
@@ -29,14 +36,21 @@ export default function ProfilePage(props) {
         history.push('/profile/edit');
 
     useEffect(() => {
-        API.get('bookings/' + email).then(res => {
-        setBookings(res.data)
-        })
-            }, []);
 
-    const deleteBooking = () => {
-        API.delete('bookings/booking/delete/' + bookings._id).then(res =>
+        apiGet();
+    }, []);
+
+    const modalDelete = (id) =>{
+
+        setSecondModalIsOpen(true);
+        setSelectedBookingId(id);
+
+    }
+
+    const deleteBooking = (id) => {
+        API.delete('bookings/booking/delete/' + id).then(res =>
             console.log('Reserva eliminada'),
+            apiGet()
         )
         setSecondModalIsOpen(false);
     }
@@ -63,12 +77,12 @@ export default function ProfilePage(props) {
                             </div>
                             <div className="col-3">
                                 <img className="roundimg" src={booking.guardian.personalImage}/>
-                                <span onClick={()=>setSecondModalIsOpen(true)} className="pi pi-trash trashbtn"></span>
+                                <span onClick={()=>modalDelete(booking._id)} className="pi pi-trash trashbtn"></span>
                                 <Modal className="secondmodal" isOpen={secondModalIsOpen}>
                                     <p>¿Seguro que quieres eliminar la reserva?</p>
                                     <div className="row align-items-center">
                                         <button onClick={()=>setSecondModalIsOpen(false)} className="whitebtn col-6">No</button>
-                                        <button onClick={deleteBooking} className="whitebtn col-6">Sí</button>
+                                        <button onClick={()=> deleteBooking(selectedBookingId)} className="whitebtn col-6">Sí</button>
                                     </div>
                                 </Modal>
                             </div>
