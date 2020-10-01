@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import Location from "./components/Location/Location";
 import { API} from "../../../shared/services/api";
 import { Carousel } from "primereact/carousel";
@@ -7,15 +7,17 @@ import "./AvailableGuardianListPage.scss";
 import {UsersNavBar} from "../shared/UsersNavBar/UsersNavBar";
 import "../shared/UsersNavBar/UsersNavBar.scss"
 
+
 export default function AvailableGuardianListPage() {
 
     const [guardians, setGuardians] = useState([]);
-    //crear activeguardian usestate
+    const [activeGuardian, setActiveGuardian] = useState(0);
 
     useEffect(() => {
         API.get('users/guardianes').then(res =>
         setGuardians(res.data)
-        )}, [])
+        )},
+         [])
 
     const itemTemplate = (guardian) =>{
         return  (
@@ -37,11 +39,11 @@ export default function AvailableGuardianListPage() {
             </div>
         )
     }
-
+console.log(activeGuardian)
     return (
                     <div>
-                        <Location guardians={guardians}/>
-                        <Carousel value={guardians} itemTemplate={itemTemplate} page={3}></Carousel>
+                        <Location guardians={guardians} setActiveGuardian={setActiveGuardian}/>
+                        <Carousel value={guardians} itemTemplate={itemTemplate} page={activeGuardian} onPageChange={(e) => setActiveGuardian(e.page)}></Carousel>
                         <UsersNavBar/>
                     </div>
     )

@@ -22,8 +22,8 @@ export default function SelectedGuardianPage() {
     }, []);
 
     function pintarMapa(guardian) {
-        const lat = guardian.geoLocation[0]
-        const lng = guardian.geoLocation[1];
+        const lat = parseFloat(guardian.geoLocation[0]);
+        const lng = parseFloat(guardian.geoLocation[1]);
         let myLatLng = {lat: lat, lng: lng};
         const map = new google.maps.Map(document.getElementById("map"), {
             center: myLatLng,
