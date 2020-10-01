@@ -20,7 +20,7 @@ export default function PreBookingDetailPage() {
         "finalDate": withdrawal,
         "nSuitcases": Number(luggage),
         "client": emailUser,
-        "guardian": guardian.id
+        "guardian": guardian.id,
     });
 
     const maletas = Number(luggage)

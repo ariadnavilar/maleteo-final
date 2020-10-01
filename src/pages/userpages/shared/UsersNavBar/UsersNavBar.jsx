@@ -4,11 +4,27 @@ import {Link, NavLink} from "react-router-dom";
 
 export function UsersNavBar() {
 
+   const logged = localStorage.getItem("token");
+    let route;
+    let classActive;
+
+    if(logged){
+
+        route = "/findguardian"
+        classActive = ""
+    }
+    else{
+        route = "/";
+        classActive= "orangeicon";
+    }
+
+
     return (
         <div className="align-items-end">
             <div className="separator"></div>
             <div className="navbar">
-                <NavLink exact to="/" activeClassName="orangeicon" className="navicons">
+                
+                <NavLink  exact to={route} activeClassName={classActive} className="navicons">
                     <span className="pi pi-home icons"></span>
                 </NavLink>
                 <NavLink exact to="/findguardian" activeClassName="orangeicon" className="navicons">

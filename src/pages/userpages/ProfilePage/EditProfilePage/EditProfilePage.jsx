@@ -46,6 +46,7 @@ export default function EditProfilePage() {
         <div className="margintop">
             <span onClick={backToProfile} className="pi pi-chevron-left completedleft"></span>
             <h5 className="margintop">Datos del perfil</h5>
+            <img src={user.personalImage} alt="Foto personal" className="roundimg"/>
             <p className="margintop">
                 <span className="pi pi-user smicons">
                 </span>
