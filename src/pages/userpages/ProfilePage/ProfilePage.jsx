@@ -6,9 +6,11 @@ import Modal from 'react-modal';
 import {UsersNavBar} from "../shared/UsersNavBar/UsersNavBar";
 
 export default function ProfilePage(props) {
+
     const history = useHistory();
     const user = JSON.parse(localStorage.getItem('user'));
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [secondModalIsOpen, setSecondModalIsOpen] = useState(false);
     const [bookings, setBookings] = useState([]);
 
     const email = user.email;
@@ -27,9 +29,17 @@ export default function ProfilePage(props) {
         history.push('/profile/edit');
 
     useEffect(() => {
-        API.get('bookings/' + email).then(res =>
+        API.get('bookings/' + email).then(res => {
         setBookings(res.data)
-    )}, [])
+        })
+            }, []);
+
+    const deleteBooking = () => {
+        API.delete('bookings/booking/delete/' + bookings._id).then(res =>
+            console.log('Reserva eliminada'),
+        )
+        setSecondModalIsOpen(false);
+    }
 
     return (
         <div className="margintop">
@@ -44,12 +54,24 @@ export default function ProfilePage(props) {
                 <h3>Tus reservas</h3>
                 {bookings && <div>
                     {bookings.map((booking, i) =>
-                        <div>
+                        <div className="bookingcontainer row">
+                            <div className="col-9">
                             <h5>Reserva nº{1+i++}</h5>
-                            <p>{new Date(booking.initialDate).toLocaleDateString()}</p>
-                            <p>{new Date(booking.finalDate).toLocaleDateString()}</p>
-                            <p>Tu guardián es {booking.guardian.name}</p>
-                            <Link to={"/bookings/" + booking._id}>Detalles de la reserva</Link>
+                                <p className="bookingtext">{new Date(booking.initialDate).toLocaleDateString()} - {new Date(booking.finalDate).toLocaleDateString()}</p>
+                                <p className="bookingtext">Tu guardián es {booking.guardian.name}</p>
+                                <Link to={"/bookings/" + booking._id}>Detalles de la reserva</Link>
+                            </div>
+                            <div className="col-3">
+                                <img className="roundimg" src={booking.guardian.personalImage}/>
+                                <span onClick={()=>setSecondModalIsOpen(true)} className="pi pi-trash trashbtn"></span>
+                                <Modal className="secondmodal" isOpen={secondModalIsOpen}>
+                                    <p>¿Seguro que quieres eliminar la reserva?</p>
+                                    <div className="row align-items-center">
+                                        <button onClick={()=>setSecondModalIsOpen(false)} className="whitebtn col-6">No</button>
+                                        <button onClick={deleteBooking} className="whitebtn col-6">Sí</button>
+                                    </div>
+                                </Modal>
+                            </div>
                         </div>
                         )}
                 </div>}

@@ -48,13 +48,15 @@ export default function EditProfilePage() {
                 {new Date(user.birthdate).toLocaleDateString()}
             </p>
 
-            <div className="centered">
+            <div className="centered endbtn">
                 <button className="whitebtn" onClick={()=>setModalIsOpen(true)}>
                     <span className="pi pi-pencil smicons">
-                    </span>Modificar datos</button>
+                    </span>Modificar datos
+                </button>
             </div>
 
             {/*-----------------formulario de put dentro de la modal--------------------*/}
+
             <Modal isOpen={modalIsOpen}>
 
                 <div className="closewindow">
@@ -77,7 +79,7 @@ export default function EditProfilePage() {
                     <input type="date" name="birthdate" placeholder={user.birthdate} defaultValue={user.birthdate}/>
 
                     <div className="centered">
-                        <button className="whitebtn modalbtn" type="submit" value="Guardar cambios">enviar</button>
+                        <button onClick={()=>setModalIsOpen(false)} className="whitebtn modalbtn" type="submit" value="Guardar cambios">Guardar cambios</button>
                     </div>
 
                 </form>

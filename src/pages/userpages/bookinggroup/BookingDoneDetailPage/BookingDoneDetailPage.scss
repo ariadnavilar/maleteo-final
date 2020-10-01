@@ -11,10 +11,12 @@
 }
 
 .fotoguardian {
-  height: 64pt;
-  width: auto;
-  align-items: center;
-  border-radius: 7px;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  position: absolute;
+  right: 25px;
 }
 
 .reseña1 {

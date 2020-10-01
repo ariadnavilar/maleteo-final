@@ -8,7 +8,7 @@ export function UsersNavBar() {
         <div className="align-items-end">
             <div className="separator"></div>
             <div className="navbar">
-                <NavLink exact to="/findguardian" activeClassName="orangeicon" className="navicons">
+                <NavLink exact to="/" activeClassName="orangeicon" className="navicons">
                     <span className="pi pi-home icons"></span>
                 </NavLink>
                 <NavLink exact to="/findguardian" activeClassName="orangeicon" className="navicons">

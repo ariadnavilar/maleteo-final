@@ -27,6 +27,9 @@ export default function AvailableGuardianListPage() {
                         <div className="inlindediv col-6">
                             <p className="textinfo">{guardian.name} {guardian.surname}</p>
                             <img className="personalimg" src={guardian.personalImage}/>
+                            <p className="textinfo locationtext"><span className="pi pi-map-marker"></span>
+                                {guardian.location}
+                            </p>
                         </div>
                     </div>
                 </Link>

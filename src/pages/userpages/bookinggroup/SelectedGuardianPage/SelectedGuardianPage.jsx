@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import {API} from "../../../../shared/services/api";
 import {Carousel} from "primereact/carousel";
 import "./SelectedGuardianPage.scss"
+import {UsersNavBar} from "../../shared/UsersNavBar/UsersNavBar";
 
 export default function SelectedGuardianPage() {
 
@@ -47,7 +48,7 @@ export default function SelectedGuardianPage() {
 
     const itemTemplate = (image) => {
         return (
-            <div className="fotodelacasa">
+            <div>
                 <img src={image} className="imgCarousel"></img>
             </div>
         )
@@ -59,69 +60,52 @@ export default function SelectedGuardianPage() {
             <div>
                 <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
             </div>
-            <br/>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-8">
-                        <h5>El Hall de {guardian.name}</h5>
-                        <p>{guardian.location}</p>
-                    </div>
-                    <div className="col-4">
-                        <img className="fotoguardian" src={guardian.personalImage}/>
-                    </div>
+            <div className="row margintop">
+                <div className="col-8">
+                    <h5>El Hall de {guardian.name}</h5>
+                    <p>{guardian.location}</p>
+                </div>
+                <div className="">
+                    <img className="fotoguardian" src={guardian.personalImage}/>
+                </div>
+                <div className="col-7">
+                    <span className="pi pi-star"/>
+                    <span className="pi pi-star"/>
+                    <span className="pi pi-star"/>
+                    <span className="pi pi-star"/>
+                    <span className="pi pi-star"/>
                 </div>
             </div>
-
-            <div className="estrellas">
-                <i className="pi pi-star"/>
-                <i className="pi pi-star"/>
-                <i className="pi pi-star"/>
-                <i className="pi pi-star"/>
-                <i className="pi pi-star"/>
-            </div>
-            <p></p>
-
             <div className="menurojo">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-8">
-                            <p>¡Rápido no le queda mucho espacio!</p>
-                        </div>
-                        <div className="col-4">
-                            <i className="pi pi-briefcase"/>
-                        </div>
+                        <p>¡Rápido no le queda mucho espacio!</p>
                     </div>
                 </div>
             </div>
-
-            <p></p>
-
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-2">
-                        <i className="pi pi-home" style={{'fontSize': '2em', 'color': '#FF9B33'}}></i>
-                    </div>
-                    <div className="col-10">
-                        <h6>Tipo de locker</h6>
-                        <p>El salón de su casa será el lugar idóneo para
-                            alojar tus maletas y cuidar de ellas.</p>
-                    </div>
+            <div className="row margintop">
+                <div className="col-2">
+                    <span className="pi pi-home selectedguardianicons"></span>
                 </div>
-                <br/>
-                <div className="row">
-                    <div className="col-2">
-                        <i className="pi pi-users" style={{'fontSize': '2em', 'color': '#FF9B33'}}></i>
-                    </div>
-                    <div className="col-10">
-                        <h6>Como la patena</h6>
-                        <p>19 usuarios recientes han catalogado su
-                            espacio como muy limpio.</p>
-                    </div>
+                <div className="col-10">
+                    <h6>Tipo de locker</h6>
+                    <p>El salón de su casa será el lugar idóneo para
+                        alojar tus maletas y cuidar de ellas.</p>
                 </div>
-                <br/>
+            </div>
+            <div className="row">
+                <div className="col-2">
+                    <span className="pi pi-users selectedguardianicons"></span>
+                </div>
+                <div className="col-10">
+                    <h6>Como la patena</h6>
+                    <p>19 usuarios recientes han catalogado su
+                        espacio como muy limpio.</p>
+                </div>
+            </div>
                 <div className="row">
                     <div className="col-2">
-                        <i className="pi pi-chart-line" style={{'fontSize': '2em', 'color': '#FF9B33'}}></i>
+                        <span className="pi pi-chart-line selectedguardianicons"></span>
                     </div>
                     <div className="col-10">
                         <h6>Un Fortín</h6>
@@ -129,18 +113,12 @@ export default function SelectedGuardianPage() {
                             experiéncia como muy segura.</p>
                     </div>
                 </div>
-                <br/>
-            </div>
             <div>
                 <h5>Ubicación</h5>
-                {/*Espacion para pintar el mapa*/}
                 <div>
                     <div id="map" className="map"></div>
                 </div>
-                {/*espacio de reseñas he puestos los nombres inventados, Aleatorios*/}
-                <br/>
-                <h5>Reseñas</h5>
-                <br/>
+                <h5 className="margintop">Reseñas</h5>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-2">
@@ -155,7 +133,6 @@ export default function SelectedGuardianPage() {
                                 muchísima seguridad.</p>
                         </div>
                     </div>
-                    <br/>
                     <div className="row">
                         <div className="col-2">
                             <img className="reseña1"
@@ -183,9 +160,8 @@ export default function SelectedGuardianPage() {
                                 genial.</p>
                         </div>
                     </div>
-                    <br/>
                 </div>
-                <h5>Normas de {guardian.name}</h5>
+                <h5 className="margintop">Normas de {guardian.name}</h5>
                 <p>Cómo debe ser tu maleta</p>
                 <p>Tipo de cancelación de reserva</p>
                 <p>Contactar con tu guardián</p>
@@ -193,9 +169,10 @@ export default function SelectedGuardianPage() {
                 <p>Otros lockers cerca de ti</p>
                 <div className="centered">
                     <Link to="/prebooking">
-                        <button className="orangebtn" onClick={saveGuardian}>Reservar Ahora</button>
+                        <button className="orangebtn booknowbtn" onClick={saveGuardian}>Reservar Ahora</button>
                     </Link>
                 </div>
+                <UsersNavBar/>
             </div>
         </div>
     )

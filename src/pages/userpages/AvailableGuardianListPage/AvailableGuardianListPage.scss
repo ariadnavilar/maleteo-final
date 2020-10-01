@@ -5,6 +5,10 @@
   margin-top: 0;
   pading-top: 0;
   font-family: 'Catamaran', sans-serif;
+  &.locationtext {
+    font-family: "Noto Sans";
+    font-size: 12px;
+  }
 }
 
 .homeimg {
@@ -14,14 +18,15 @@
 }
 
 .personalimg {
-  height: 75px;
-  width: 50%;
+  height: 85px;
+  width: 85px;
   display: flex;
   border-radius: 15px;
   object-fit: cover;
 }
 
 .p-carousel {
+  margin-top: 20px;
   margin-right: -25px;
   margin-left: -25px;
 }
@@ -42,4 +47,10 @@
 .guardianslide {
   box-shadow: 1px 1px 1px 1px #E7E7E7;
   border-top: 3px solid #61dafb;
+}
+
+.pi-map-marker {
+  margin-right: 2px;
+  color: orange;
+  font-size: 15px;
 }

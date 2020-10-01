@@ -48,24 +48,18 @@ export default function BookingDoneDetailPage() {
     if (!guardian) {
         return (<div></div>)
     }
-
-
-
     return (
         <div>
             <div>
                 <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
             </div>
-            <br/>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-8">
                         <h5>El Hall de {guardian.name}</h5>
                         <p>{guardian.location}</p>
                     </div>
-                    <div className="col-4">
-                        <img className="fotoguardian" src={guardian.personalImage}/>
-                    </div>
+                    <img className="fotoguardian" src={guardian.personalImage}/>
                 </div>
             </div>
 
@@ -75,7 +69,6 @@ export default function BookingDoneDetailPage() {
                 <div>
                     <div id="map" className="map"></div>
                 </div>
-                <br/>
                 <div className="reservas">
                     <div className="container-fluid">
                         <div className="row">
@@ -94,21 +87,14 @@ export default function BookingDoneDetailPage() {
                         </div>
                     </div>
                 </div>
-                <br/>
                 <h5>Normas de {guardian.name}</h5>
                 <h5>Cómo debe ser tu maleta</h5>
-                <div className="separator"></div>
                 <h5>Codigo de reserva</h5>
                 <p>{booking._id}</p>
-                <div className="separator"></div>
                 <h5>Coste total</h5>
                 <p>{booking.price * booking.nSuitcases} €</p>
                 <hp>Desglose</hp>
-                <div className="separator"></div>
                 <h5>¿Necesitas Ayuda?</h5>
-                <br/>
-                <div className="separator"></div>
-                <br/>
             </div>
 
             <UsersNavBar/>

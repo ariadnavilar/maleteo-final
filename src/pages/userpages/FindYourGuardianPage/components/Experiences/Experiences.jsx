@@ -1,5 +1,6 @@
 import React from "react";
 import "../News/News.scss";
+import "./Experciences.scss";
 
 export default function Experiences() {
     return (
@@ -10,7 +11,7 @@ export default function Experiences() {
             </div>
             <h4>Conoce la costa brava</h4>
             <p>Después de los meses que hemos estado encerrados, seguro que a todos nos apetece hacer alguna escapada, siempre tomando todas las medidas de seguridad necesarias</p>
-            <div className="centered">
+            <div className="centered endbutton">
                 <input className="whitebtn" type="submit" value="Mostrar más"/>
             </div>
         </div>

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { API } from "../../../../shared/services/api";
 import { useHistory } from "react-router-dom";
 import {UsersNavBar} from "../../../userpages/shared/UsersNavBar/UsersNavBar";
+import "./GuardianForm.scss";
 
 export default function GuardianForm() {
 
@@ -41,10 +42,12 @@ export default function GuardianForm() {
             <h5>¿Dónde está tu espacio?</h5>
             <form onSubmit={onSubmit} ref={formDOM}>
 
-                <input type="file" name="images" multiple/>
-
                 <label htmlFor="location">Ubicación</label>
                 <input type="text" name="location" id="location" placeholder="Ej. Calle Alcalá, 58 (Madrid, España)" ref={register ({required:true})}/>
+
+                <label htmlFor="images">Comparte fotos de tu espacio</label>
+                <input type="file" name="images" multiple/>
+
 
                 {/* ---------MÁS INPUTS PARA SER GUARDIÁN SI QUEREMOS MODIFICAR LA BBDD-------------------------------------------------
 
@@ -60,7 +63,7 @@ export default function GuardianForm() {
                 {errors.pictures && <span className="warning">Añade al menos una fotografía</span>}*/}
 
                 <div className="centered">
-                    <input className="orangebtn" type="submit" value="Registrarse"/>
+                    <input className="orangebtn guardianformbtn" type="submit" value="Registrarse"/>
                 </div>
             </form>
             <UsersNavBar/>

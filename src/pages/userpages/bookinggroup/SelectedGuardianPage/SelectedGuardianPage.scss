@@ -1,21 +1,21 @@
-.map {
-    height: 400px;
-}
-
-.fotodelacasa {
-    display: flex;
-    justify-content: center;
-    height: 125pt;
-    width: auto;
-}
 .imgCarousel{
     max-width: 100%;
 }
+
+.p-carousel {
+    &.bigger {
+        height: 300px;
+    }
+}
+
 .fotoguardian {
-    height: 64pt;
-    width: auto;
+    height: 75px;
+    width: 50%;
     align-items: center;
-    border-radius: 7px;
+    border-radius: 10px;
+    object-fit: cover;
+    position: absolute;
+    right: 25px;
 }
 
 .reseña1 {
@@ -24,30 +24,18 @@
     border-radius: 150px;
 }
 
-
-.estrellas{
-    display: flex;
-    .pi{
-        &.pi-star{
-            display: flex;
-            color: yellow;
-        }
-    }
+.pi-star {
+    color: gold;
 }
 
-.menurojo {
-    display: flex;
-    align-items: center;
-    color: red;
-    font-Size: 8pt;
-    .pi {
-        &.pi-briefcase {
-            align-items: center;
-            font-Size: 9pt;
-            color: #ff8200;
-            width: 8pt;
-        }
-    }
+.selectedguardianicons {
+    font-size: 2em;
+    color: rgb(246, 143, 36);
 }
+
+.booknowbtn {
+    margin-bottom: 80px;
+}
+
 
 
