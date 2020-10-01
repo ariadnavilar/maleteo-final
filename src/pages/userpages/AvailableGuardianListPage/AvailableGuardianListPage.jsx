@@ -10,6 +10,7 @@ import "../shared/UsersNavBar/UsersNavBar.scss"
 export default function AvailableGuardianListPage() {
 
     const [guardians, setGuardians] = useState([]);
+    //crear activeguardian usestate
 
     useEffect(() => {
         API.get('users/guardianes').then(res =>
@@ -40,7 +41,7 @@ export default function AvailableGuardianListPage() {
     return (
                     <div>
                         <Location guardians={guardians}/>
-                        <Carousel value={guardians} itemTemplate={itemTemplate}></Carousel>
+                        <Carousel value={guardians} itemTemplate={itemTemplate} page={3}></Carousel>
                         <UsersNavBar/>
                     </div>
     )
