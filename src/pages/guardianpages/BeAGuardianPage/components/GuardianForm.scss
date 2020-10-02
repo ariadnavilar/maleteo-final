@@ -1,3 +1,28 @@
 .guardianformbtn {
   margin-top: 150px;
 }
+
+.marginfinal {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: black;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.secondmodal {
+  &.bigger {
+    height: 170px;
+    padding: 10px;
+  }
+}
+
+.closex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.enlace {
+  text-decoration: underline;
+}

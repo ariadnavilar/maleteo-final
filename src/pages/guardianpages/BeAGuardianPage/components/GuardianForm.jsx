@@ -1,9 +1,10 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { useForm } from "react-hook-form";
 import { API } from "../../../../shared/services/api";
 import { useHistory } from "react-router-dom";
 import {UsersNavBar} from "../../../userpages/shared/UsersNavBar/UsersNavBar";
 import "./GuardianForm.scss";
+import Modal from 'react-modal';
 
 export default function GuardianForm() {
 
@@ -12,6 +13,7 @@ export default function GuardianForm() {
     const user = JSON.parse(localStorage.getItem('user'));
     const google = window.google;
     const formDOM = useRef(null);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const id = user.id;
 
@@ -34,7 +36,17 @@ export default function GuardianForm() {
         formData.append('geoLocation[]', parseFloat(dataGuardian.location.lng));
         API.put('users/changeGuardian/' + id, formData).then(res => {
             console.log('Guardián registrado');
+            setModalIsOpen(true);
         })
+    }
+
+    const seeMyGuardianProfile = () => {
+        history.push('/selectedguardian/' + user.id)
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+        history.push('/profile')
     }
 
     return (
@@ -66,6 +78,11 @@ export default function GuardianForm() {
                     <input className="orangebtn guardianformbtn" type="submit" value="Registrarse"/>
                 </div>
             </form>
+            <Modal isOpen={modalIsOpen} className="secondmodal bigger">
+                <span onClick={closeModal} className="pi pi-times closex"></span>
+                <p>Te has registrado como Guardián</p>
+                <p className="enlace" onClick={seeMyGuardianProfile}>Consulta tu perfil de guardián</p>
+            </Modal>
             <UsersNavBar/>
         </div>
     )

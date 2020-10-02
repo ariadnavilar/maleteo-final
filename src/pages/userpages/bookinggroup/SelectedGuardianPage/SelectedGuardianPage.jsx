@@ -121,12 +121,12 @@ export default function SelectedGuardianPage() {
                 <h5 className="margintop">Reseñas</h5>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-2">
-                            <img className="reseña1"
+                        <div className="col-3">
+                            <img className="fotoguardian reseña1"
                                  src="https://images.freeimages.com/images/large-previews/023/young-woman-6-1434119.jpg"
                                  alt=""/>
                         </div>
-                        <div className="col-10">
+                        <div className="col-9">
                             <h6>Ana Maria S</h6>
                             <p>El hall es acogedor y super chulo, muy limpio, Marta nos ayudó a subir las maletas y nos
                                 transmitió
@@ -134,12 +134,12 @@ export default function SelectedGuardianPage() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-2">
-                            <img className="reseña1"
+                        <div className="col-3 margintop">
+                            <img className="fotoguardian reseña1"
                                  src="https://cdn.pixabay.com/photo/2019/11/06/15/49/redheads-4606477_960_720.jpg"
                                  alt=""/>
                         </div>
-                        <div className="col-10">
+                        <div className="col-9">
                             <h6>Patricia R</h6>
                             <p>Is very nice and her space is so cozy, she also
                                 showed us the best places to go for tapas in Madrid. Thank you so much.</p>
@@ -147,12 +147,12 @@ export default function SelectedGuardianPage() {
                     </div>
                     <br/>
                     <div className="row">
-                        <div className="col-2">
-                            <img className="reseña1"
+                        <div className="col-3">
+                            <img className="fotoguardian reseña1"
                                  src="https://cdn.pixabay.com/photo/2017/06/26/02/47/people-2442565_960_720.jpg"
                                  alt=""/>
                         </div>
-                        <div className="col-10">
+                        <div className="col-9">
                             <h6>Juan P</h6>
                             <p>responde rápido y estuvo muy atenta. Nos dió
                                 muchos consejos sobre Madrid y pudimos hacer turismo tranquilamente. Su ubicación nos
