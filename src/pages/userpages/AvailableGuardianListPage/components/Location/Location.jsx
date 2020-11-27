@@ -36,33 +36,28 @@ export default function Location(props) {
             title: 'Prueba',
         });
 
-        for (let i = 0; i < guardians.length ; i++) {
+        for (let i = 0; i < guardians.length; i++) {
             let guardian = guardians[i];
             const lat = guardian.geoLocation[0];
             const lng = guardian.geoLocation[1];
-
-          
 
             let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
             let marker = new google.maps.Marker({
                 position: new google.maps.LatLng(lat, lng),
                 title: guardian.name,
-                icon: iconBase + 'schools_maps.png' 
-     
+                icon: iconBase + 'schools_maps.png'
+
             });
             marker.setMap(map);
-            
+
             marker.addListener("click", () => {
                 setActiveGuardian(i);
-              });
+            });
         }
 
     }, [guardians])
 
     return (
-        <div>
-            <div className="map" id="map">
-            </div>
-        </div>
+            <div className="map" id="map"></div>
     )
 }

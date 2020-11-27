@@ -1,17 +1,38 @@
+@import 'src/index.scss';
+
 .navbar {
   position: fixed;
   bottom: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 0 25px 0 25px;
   width: 100%;
   height: 43px;
   background: #ffffff;
   color: black;
   margin-left: -30px;
   margin-right: -30px;
+  &__icons {
+    color: black;
+    font-size: 25px;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+  &__icons-active {
+    color: $color-primary;
+    font-size: 25px;
+  }
+  &__separator {
+    width: 100%;
+    height: 5px;
+    margin-top: 20px;
+    margin-left: -30px;
+    margin-right: -30px;
+    background: linear-gradient(to bottom, white, #E7E7E7);
+    position: fixed;
+    bottom: 43px;
+  }
 }
 
 .pi {
@@ -20,27 +41,13 @@
   }
 }
 
-.navicons {
-  color: black;
-  font-size: 25px;
-}
-
-.navicons:hover {
-  color: none;
-}
-
-.orangeicon {
-  color: rgb(246, 143, 36);
-  font-size: 25px;
-}
-
-.separator {
-  width: 100%;
-  height: 5px;
-  margin-top: 20px;
-  margin-left: -30px;
-  margin-right: -30px;
-  background: linear-gradient(to bottom, white, #E7E7E7);
-  position: fixed;
-  bottom: 43px;
+@media screen and (max-width: 400px) {
+  .navbar {
+    margin-left: -20px;
+    margin-right: -20px;
+    &__separator {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
 }

@@ -1,55 +1,79 @@
+.profile {
+  &__orange-icon {
+      font-size: 18px;
+  }
+}
+
+.modal {
+  &__close-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  &__booking {
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+  }
+  &__text {
+    margin: 0;
+  }
+  &__img {
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff8200;
+  }
+  &__delete-btn {
+    margin-top: 28px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
+
 .margintop {
   margin-top: 30px;
 }
 
 .endbtn  {
   margin-top: 250px;
+  cursor: pointer;
+  margin-bottom: 100px;
 }
 
-.closebtn {
-  background-color: transparent;
-  border: none;
-}
-
-.orangeicons {
-  font-size: 18px;
-}
-
-.bookingcontainer {
-  margin-bottom: 10px;
-  border: 2px solid #282c34;
-  border-radius: 15px;
-}
-
-.bookingtext {
-  margin: 0;
-}
-
-.roundimg {
-  height: 50px;
-  width: 50px;
-  margin-right: 5px;
-  margin-top: 5px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgb(246, 143, 36);
-}
-
-.trashbtn {
-  margin-top: 28px;
-  margin-left: 20px;
-}
-
-.secondmodal {
+.modal-confirm {
   height: 150px;
   padding: 20px;
   text-align: center;
   background-color: #FEE5C5;
   margin: 70px;
+  min-height: 150px;
   font-family: 'Catamaran', sans-serif;
 }
 
 .whitebtn {
   margin: 0px;
   background-color: white;
+  &.confirm {
+    max-width: 100px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .modal {
+    &__img {
+      height: 10vw;
+      width: 10vw;
+      margin-bottom: 2vw;
+    }
+    &__title {
+      margin-bottom: 2vw;
+    }
+    &__text {
+      margin: 10px 0;
+    }
+  }
+
 }

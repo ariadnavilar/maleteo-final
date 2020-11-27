@@ -9,8 +9,8 @@ import BookingCompletedPage from "./pages/userpages/bookinggroup/BookingComplete
 import AvailableGuardianListPage from "./pages/userpages/AvailableGuardianListPage/AvailableGuardianListPage";
 import ProfilePage from "./pages/userpages/ProfilePage/ProfilePage";
 import PrivateRoute from "./shared/components/PrivateRoute/PrivateRoute"
-import FirstWelcomePage from "./pages/sharedpages/FirstWelcomePage/FirstWelcomePage";
-import SecondWelcomePage from "./pages/sharedpages/SecondWelcomePage/SecondWelcomePage";
+import FirstWelcomePage from "./pages/sharedpages/WelcomePages/FirstWelcomePage";
+import SecondWelcomePage from "./pages/sharedpages/WelcomePages/SecondWelcomePage";
 import PreBookingDetailPage from "./pages/userpages/bookinggroup/PreBookingDetailPage/PreBookingDetailPage";
 import BookingDoneDetailPage from "./pages/userpages/bookinggroup/BookingDoneDetailPage/BookingDoneDetailPage"
 import BeAGuardianPage from "./pages/guardianpages/BeAGuardianPage/BeAGuardianPage";

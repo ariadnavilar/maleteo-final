@@ -1,18 +1,21 @@
-.textlogin {
-  font-size: 22px;
-  font-weight: normal;
-  text-decoration: none;
-  color: black;
-  margin-bottom: 20px;
-}
+$color-primary: #ff8200;
 
-.col {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.underline {
-  text-decoration: underline orange;
-  text-underline-offset: 20%;
-  background-color: orange;
+.login {
+  &__text {
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+  }
+  &__text-active {
+    text-decoration: underline $color-primary;
+    text-underline-offset: 5em;
+    background-color: $color-primary;
+    position: relative;
+  }
+  &__container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./BeAGuardianPage.scss";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import GuardianForm from "./components/GuardianForm";
 
 export default function BeAGuardianPage() {

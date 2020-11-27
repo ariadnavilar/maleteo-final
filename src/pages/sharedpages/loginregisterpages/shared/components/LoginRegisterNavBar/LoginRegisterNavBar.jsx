@@ -6,14 +6,15 @@ export default function LoginRegisterNavBar() {
     return (
         <div className="container">
             <div className="row">
-                <div className="col">
-                    <NavLink to="/login" activeClassName="underline">
-                        <h3 className="textlogin">Iniciar sesión</h3>
+                <div className="login__container col">
+                    <NavLink to="/login" activeClassName="login__text-active">
+                        <h3 className="login__text">Iniciar sesión</h3>
+                        <div className="under"></div>
                     </NavLink>
                 </div>
-                <div className="col">
-                    <NavLink to="/register" activeClassName="underline">
-                        <h3 className="textlogin">Regístrate</h3>
+                <div className="login__container col">
+                    <NavLink to="/register" activeClassName="login__text-active">
+                        <h3 className="login__text">Regístrate</h3>
                     </NavLink>
                 </div>
             </div>

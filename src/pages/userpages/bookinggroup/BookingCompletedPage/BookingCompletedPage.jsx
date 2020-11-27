@@ -14,7 +14,7 @@ export default function BookingCompletedPage() {
     return (
         <div>
             <div className="closewindow">
-                <button onClick={findRedirect} className="gobackbtn">
+                <button onClick={findRedirect} className="back-btn">
                     <span className ="pi pi-times completed"></span>
                 </button>
             </div>

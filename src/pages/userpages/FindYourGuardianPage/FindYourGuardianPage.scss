@@ -1,3 +1,11 @@
-.findguardian {
-  margin-top: 30px;
+.search {
+  &__container {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search__container {
+    padding-top: 30px;
+  }
 }

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import {API} from "../../../../shared/services/api";
 import {Carousel} from "primereact/carousel";
+import "../../AvailableGuardianListPage/AvailableGuardianListPage.scss";
 import "./SelectedGuardianPage.scss"
 import {UsersNavBar} from "../../shared/UsersNavBar/UsersNavBar";
 
@@ -49,7 +50,7 @@ export default function SelectedGuardianPage() {
     const itemTemplate = (image) => {
         return (
             <div>
-                <img src={image} className="imgCarousel"></img>
+                <img src={image} className="carousel__img"></img>
             </div>
         )
     }
@@ -57,30 +58,20 @@ export default function SelectedGuardianPage() {
 
     return (
         <div>
-            <div>
-                <Carousel value={guardian.images} itemTemplate={itemTemplate}/>
-            </div>
-            <div className="row margintop">
-                <div className="col-8">
-                    <h5>El Hall de {guardian.name}</h5>
-                    <p>{guardian.location}</p>
-                </div>
-                <div>
-                    <img className="fotoguardian" src={guardian.personalImage}/>
-                </div>
-                <div className="col-7">
-                    <span className="pi pi-star"/>
-                    <span className="pi pi-star"/>
-                    <span className="pi pi-star"/>
-                    <span className="pi pi-star"/>
-                    <span className="pi pi-star"/>
-                </div>
-            </div>
-            <div className="menurojo">
-                <div className="container-fluid">
-                    <div className="row">
-                        <p>¡Rápido no le queda mucho espacio!</p>
+            <div className="col-12 row">
+                <Carousel className="col-xs-12 col-md-6" value={guardian.images} itemTemplate={itemTemplate}/>
+                <div className="col-xs-12 col-md-6 carousel__info">
+                    <div className="col-8">
+                        <h5>El Hall de {guardian.name}</h5>
+                        <p>{guardian.location}</p>
+                        <span className="pi pi-star"/>
+                        <span className="pi pi-star"/>
+                        <span className="pi pi-star"/>
+                        <span className="pi pi-star"/>
+                        <span className="pi pi-star"/>
+                        <p className="carousel__info-urgent">¡Rápido no te quedes sin reservarlo!</p>
                     </div>
+                    <img className="carousel__img-profile" src={guardian.personalImage}/>
                 </div>
             </div>
             <div className="row margintop">
@@ -103,16 +94,16 @@ export default function SelectedGuardianPage() {
                         espacio como muy limpio.</p>
                 </div>
             </div>
-                <div className="row">
-                    <div className="col-2">
-                        <span className="pi pi-chart-line selectedguardianicons"></span>
-                    </div>
-                    <div className="col-10">
-                        <h6>Un Fortín</h6>
-                        <p>El 95% de los usuarios han valorado su
-                            experiéncia como muy segura.</p>
-                    </div>
+            <div className="row">
+                <div className="col-2">
+                    <span className="pi pi-chart-line selectedguardianicons"></span>
                 </div>
+                <div className="col-10">
+                    <h6>Un Fortín</h6>
+                    <p>El 95% de los usuarios han valorado su
+                        experiéncia como muy segura.</p>
+                </div>
+            </div>
             <div>
                 <h5>Ubicación</h5>
                 <div>
@@ -122,7 +113,7 @@ export default function SelectedGuardianPage() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-3">
-                            <img className="fotoguardian reseña1"
+                            <img className="carousel__img-guardian"
                                  src="https://images.freeimages.com/images/large-previews/023/young-woman-6-1434119.jpg"
                                  alt=""/>
                         </div>
@@ -135,7 +126,7 @@ export default function SelectedGuardianPage() {
                     </div>
                     <div className="row">
                         <div className="col-3 margintop">
-                            <img className="fotoguardian reseña1"
+                            <img className="carousel__img-guardian"
                                  src="https://cdn.pixabay.com/photo/2019/11/06/15/49/redheads-4606477_960_720.jpg"
                                  alt=""/>
                         </div>
@@ -148,7 +139,7 @@ export default function SelectedGuardianPage() {
                     <br/>
                     <div className="row">
                         <div className="col-3">
-                            <img className="fotoguardian reseña1"
+                            <img className="carousel__img-guardian"
                                  src="https://cdn.pixabay.com/photo/2017/06/26/02/47/people-2442565_960_720.jpg"
                                  alt=""/>
                         </div>

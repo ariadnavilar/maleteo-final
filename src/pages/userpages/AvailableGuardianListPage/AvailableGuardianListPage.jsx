@@ -24,32 +24,31 @@ export default function AvailableGuardianListPage() {
           };
 
     return (
-                    <div>
-                        <Location guardians={guardians} setActiveGuardian={setActiveGuardian}/>
-                        <Carousel activeIndex={activeGuardian} onSelect={handleSelect} interval={500000000}>
-                                {guardians.map((guardian,i)=> 
+                    <div className="result">
+                            <Location guardians={guardians} setActiveGuardian={setActiveGuardian}/>
+                            <Carousel activeIndex={activeGuardian} onSelect={handleSelect} interval={500000000}>
+                                {guardians.map((guardian,i)=>
 
                                     <Carousel.Item>
-                                    <div className="p-carousel-content guardianlist">
-                                        <Link to={"/selectedguardian/" + guardian._id}>
-                                            <div className="row guardianslide">
-                                                <div className="inlinediv col-6">
-                                                    <img className="homeimg" src={guardian.images[0]}/>
+                                        <div className="p-carousel-content guardian-list">
+                                            <Link to={"/selectedguardian/" + guardian._id}>
+                                                <div className="row guardian-slide">
+                                                    <div className="inlinediv col-6">
+                                                        <img className="result__home-img" src={guardian.images[0]}/>
+                                                    </div>
+                                                    <div className="inlinediv col-6">
+                                                        <p className="result__info">{guardian.name} {guardian.surname}</p>
+                                                        <img className="result__guardian-img" src={guardian.personalImage}/>
+                                                        <p className="result__info location-text"><span className="pi pi-map-marker"></span>
+                                                            {guardian.location}
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div className="inlindediv col-6">
-                                                    <p className="textinfo">{guardian.name} {guardian.surname}</p>
-                                                    <img className="personalimg" src={guardian.personalImage}/>
-                                                    <p className="textinfo locationtext"><span className="pi pi-map-marker"></span>
-                                                        {guardian.location}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </div>
+                                            </Link>
+                                        </div>
                                     </Carousel.Item>
                                 )}
-
-                        </Carousel>
+                            </Carousel>
                         <UsersNavBar/>
                     </div>
     )

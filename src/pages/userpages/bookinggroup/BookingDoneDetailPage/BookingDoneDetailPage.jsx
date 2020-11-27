@@ -41,7 +41,7 @@ export default function BookingDoneDetailPage() {
     const itemTemplate = (image) => {
         return (
             <div>
-                <img src={image} className="imgCarousel"></img>
+                <img src={image} className="carousel__img"></img>
             </div>
         )
     }

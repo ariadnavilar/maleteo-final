@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {UsersNavBar} from "../../shared/UsersNavBar/UsersNavBar";
 import {API} from '../../../../shared/services/api';
-
+import "./PreBookingDetailPage.scss";
 
 export default function PreBookingDetailPage() {
 
@@ -36,24 +36,24 @@ export default function PreBookingDetailPage() {
 
     return (
         <div>
-            <button className="containerarrow">
-                <a href="javascript:history.back()"><span className="pi pi-chevron-left gobackbtn"></span></a>
+            <button className="back-btn">
+                <a href="javascript:history.back()"><span className="pi pi-chevron-left back-btn"></span></a>
             </button>
             <p style={{'fontSize': '15pt'}}>Detalles de tu reserva</p>
             <div className="reservas">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-4">
-                            <h5>Llegada</h5>
+                            <p className="prebooking__field">Llegada</p>
                             <p style={{'font-size': '14px'}}>{new Date(deposit).toLocaleDateString()}</p>
                         </div>
                         <div className="col-4">
-                            <h5>Recogida</h5>
+                            <p className="prebooking__field">Recogida</p>
                             <p style={{'font-size': '14px'}}>{new Date(withdrawal).toLocaleDateString()}</p>
                         </div>
                         <div className="col-4">
-                            <h5>Equipaje</h5>
-                            <p style={{'font-size': '14px'}}>{luggage} Equipajes</p>
+                            <p className="prebooking__field">Equipaje</p>
+                            <p style={{'font-size': '14px'}}>{luggage} Eq.</p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ export default function PreBookingDetailPage() {
                                 <p>Total</p>
                             </div>
                             <div className="col-6">
-                                <p>{preciototal}€</p>
+                                <p className="prebooking__field">{preciototal}€</p>
                             </div>
                         </div>
                     </div>

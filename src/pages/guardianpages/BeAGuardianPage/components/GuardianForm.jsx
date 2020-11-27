@@ -78,7 +78,7 @@ export default function GuardianForm() {
                     <input className="orangebtn guardianformbtn" type="submit" value="Registrarse"/>
                 </div>
             </form>
-            <Modal isOpen={modalIsOpen} className="secondmodal bigger">
+            <Modal isOpen={modalIsOpen} className="modal-confirm bigger">
                 <span onClick={closeModal} className="pi pi-times closex"></span>
                 <p>Te has registrado como Guardián</p>
                 <p className="enlace" onClick={seeMyGuardianProfile}>Consulta tu perfil de guardián</p>

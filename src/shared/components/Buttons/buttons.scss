@@ -1,5 +1,7 @@
+@import 'src/index.scss';
+
 .orangebtn {
-  background-color: rgb(246, 143, 36);
+  background-color: $color-primary;
   color: white;
   font-family: "Noto Sans", sans-serif;
   font-weight: bold;
@@ -11,23 +13,23 @@
   border: none;
   box-shadow: none;
   cursor: pointer;
-  
-  &.sm {
-    width: 45%;
+  &.small {
+    width: 49%;
     height: 60px;
-    margin-left: 3px;
-    margin-top: 0px;
-    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 0;
+    margin-top: 0;
+    font-size: 16px;
   }
 }
 
 .orangebtn:hover {
-  background-color: rgb(246, 110, 36);
+  background-color: $color-secondary;
   border-radius: 10px;
 }
 
 .whitebtn {
-  color: rgb(246, 143, 36);
+  color: $color-primary;
   background-color: transparent;
   font-family: "Noto Sans", sans-serif;
   font-weight: bold;
@@ -36,8 +38,7 @@
   height: 50px;
   border-radius: 10px;
   margin-top: 50px;
-  border: solid 2px;
-  border-color: rgb(246, 143, 36);
+  border: solid 2px $color-secondary;
   box-shadow: none;
   cursor: pointer;
   &.sm {
@@ -51,18 +52,9 @@
   }
 }
 
-/*.whitebtn:hover {
-  background-color: #FCE3C6;
-  border-radius: 10px;
-}*/
-
-.margin {
-  margin: 30px;
-}
-
-.gobackbtn {
+.back-btn {
   background-color: transparent;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: black;
   border-radius: 50%;
   padding: 10px 10px 10px 0;
@@ -74,40 +66,6 @@
 .closewindow {
     display: flex;
     flex-direction: row-reverse;
-}
-
-// <-------------SOCIAL MEDIA------------->
-
-.fbbtn {
-  background-color: rgb(56, 89, 156);
-  color: white;
-  font-family: "Noto Sans", sans-serif;
-  padding: 7px;
-  width: 150px;
-  height: 50px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-.googlebtn {
-  background-color: transparent;
-  color: black;
-  font-family: "Noto Sans", sans-serif;
-  padding: 7px;
-  width: 150px;
-  height: 50px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border: solid 2px;
-  border-color: rgb(109, 109, 109);
-  box-shadow: none;
-  cursor: pointer;
 }
 
 input[type=submit] {
