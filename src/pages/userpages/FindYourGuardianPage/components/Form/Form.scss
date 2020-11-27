@@ -29,9 +29,12 @@
     border: none;
     font-family: "Noto Sans", sans-serif;
     position: relative;
+    padding-left: 10px;
     &.entry {
       margin-right: 1%;
-      padding-left: 40px;
+      &.luggage {
+        padding-left: 40px;
+      }
     }
     &.out {
       margin-left: 1%;

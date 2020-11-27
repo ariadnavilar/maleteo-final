@@ -48,7 +48,7 @@ export default function Form() {
                 </div>
                 <div className="row search-form__dates__container">
                     <span className="pi pi-briefcase search-form__icons"></span>
-                    <input className="search-form__dates entry" type="number" name="luggage" placeholder="Nº de piezas"
+                    <input className="search-form__dates entry luggage" type="number" name="luggage" placeholder="Nº de piezas"
                            ref={register({required: true})}/>
                     <input className="orangebtn small" type="submit" value="Buscar"/>
                 </div>
