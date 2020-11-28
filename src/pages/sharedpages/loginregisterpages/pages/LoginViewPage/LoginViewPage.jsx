@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import {API} from "../../../../../shared/services/api";
 import LoginRegisterNavBar from "../../shared/components/LoginRegisterNavBar/LoginRegisterNavBar";
 import {useHistory} from "react-router-dom";
+import GoogleLogin from "react-google-login";
 
 export default function LoginViewPage(props) {
 
@@ -17,12 +18,26 @@ export default function LoginViewPage(props) {
             history.push('/findguardian');
         })
     }
+
+    const responseGoogle=(response) => {
+        console.log(response);
+        console.log(response.profileObj);
+    }
     return (
         <div className="sign__container">
             <LoginRegisterNavBar/>
             <h2 className="text-center">Inicia sesión ahora</h2>
             <div className="media__container">
                 <button type="button" className="fbbtn">Facebook</button>
+
+                {/*<GoogleLogin className="googlebtn"
+                clientId="418732125197-pb0eg74kmcrs0lb9c82fqkuqnvtpf38a.apps.googleusercontent.com"
+                buttonText="Google"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                cookiePolicy={'single_host_origin'}
+                />*/}
+
                 <button type="button" className="googlebtn">Google</button>
             </div>
             <p className="sign__text">o utiliza tu correo electrónico</p>

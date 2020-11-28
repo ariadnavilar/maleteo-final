@@ -10,7 +10,6 @@ $color-primary: #ff8200;
   }
   &__text-active {
     text-decoration: underline $color-primary;
-    text-underline-offset: 5em;
     background-color: $color-primary;
     position: relative;
   }
